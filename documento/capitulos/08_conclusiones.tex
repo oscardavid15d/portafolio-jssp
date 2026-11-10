@@ -1,0 +1,150 @@
+%==============================================================================
+\chapter{Conclusiones y trabajo futuro}
+\label{cap:conclusiones}
+%==============================================================================
+
+%------------------------------------------------------------------------------
+\section{Conclusiones}
+\label{sec:conclusiones}
+%------------------------------------------------------------------------------
+
+A lo largo de este trabajo se desarrolló un \textit{schedule} de ejecución
+basado en portafolios para el JSSP clásico, que decide para cada instancia qué
+configuraciones ejecutar, en qué orden y durante cuánto tiempo, a partir de
+las características de la instancia y de modelos de aprendizaje automático.
+Las conclusiones se organizan según los objetivos específicos y se refieren
+al portafolio estudiado, formado por tres configuraciones de Chuffed y
+Gecode, a las 236 instancias evaluadas y a un presupuesto de 300 segundos.
+
+\paragraph{Objetivo 1: comparar enfoques de portafolio.} Se implementaron y
+compararon, con la misma base de conocimiento y el mismo esquema de
+validación, la selección de una configuración (\textit{Winner Takes All} con
+vecinos más cercanos), el \textit{schedule} secuencial de SUNNY adaptado a
+optimización, un \textit{schedule} estático y un \textit{schedule} construido
+con aprendizaje automático. En el conjunto estudiado, seleccionar una sola
+configuración da el mejor resultado en promedio, con un \textit{gap} medio de
+13.12\,\% y el 87\,\% de la brecha entre el mejor \textit{solver} individual y
+el VBS cerrada. Los \textit{schedules} quedan unas décimas por detrás en
+promedio, pero son más robustos, puesto que el \textit{schedule} estático nunca
+pierde más de 4.3 puntos de \textit{gap} frente a la mejor configuración,
+mientras que \textit{Winner Takes All} llega a perder 7.8 cuando se equivoca. La
+elección entre ambos enfoques depende, por tanto, de si se prioriza el
+desempeño medio o la protección frente a errores de selección. La ventaja de
+la selección se explica porque, en este conjunto, la mejor configuración es
+fácil de predecir y las configuraciones siguen mejorando hasta el final del
+presupuesto, con lo cual fraccionar el tiempo entre varias ejecuciones reduce el
+margen de mejora de la configuración principal.
+
+\paragraph{Objetivo 2: características de las instancias.} Se construyó un
+conjunto de datos con 65 características genéricas de \texttt{mzn2feat} y 20
+características propias del JSSP, sobre la carga de las máquinas, las
+duraciones y la estructura de las rutas. Las estrategias que usan
+características cierran entre el 77\,\% y el 87\,\% de la brecha, frente al
+76\,\% de una regla que solo usa el tamaño de la instancia. Los dos grupos de
+características dan resultados parecidos y su unión es la mejor opción para
+\textit{Winner Takes All}. Las características propias, que se calculan en
+menos de un segundo sin herramientas externas, constituyen una alternativa
+práctica a \texttt{mzn2feat}.
+
+\paragraph{Objetivo 3: portafolio con predicción y selección automática.} Se
+implementó un prototipo funcional que, para una instancia nueva, calcula sus
+cotas, extrae sus características, estima con tres modelos de bosques
+aleatorios si cada configuración probará el óptimo, en cuánto tiempo y cuál
+obtendrá la mejor solución, y construye con esas predicciones el orden y el
+tiempo de ejecución. Los modelos son precisos (un AUC de 0.97 a 0.98 para
+predecir la resolución y de 0.85 a 0.86 para identificar cuándo gana cada
+una de las configuraciones de Chuffed), pero el \textit{schedule} construido con ellos resultó
+equivalente en promedio al \textit{schedule} estático. En consecuencia, con
+este portafolio, predecir bien el desempeño individual no se tradujo de forma
+directa en un mejor reparto del tiempo.
+
+\paragraph{Objetivo 4: validación experimental.} El portafolio se validó con
+236 instancias clásicas de ocho familias, mediante validación
+\textit{leave-one-out} y la simulación exacta de los \textit{schedules} a
+partir de las trayectorias de los \textit{solvers}. Todas las estrategias de
+portafolio superan al mejor \textit{solver} individual por entre 1.7 y 2.0
+puntos de \textit{gap}, una diferencia estadísticamente significativa, y
+recuperan todos o casi todos los óptimos que este pierde.
+Como referencia externa, OR-Tools CP-SAT con el mismo modelo
+obtiene un \textit{gap} medio de 3.97\,\%, muy por debajo de las estrategias
+de este portafolio, lo que muestra que, en este caso, la selección entre estas
+configuraciones mejora de forma consistente a sus miembros, pero no compensa
+la distancia frente a CP-SAT.
+
+\paragraph{Importancia de la formulación del modelo.} La mejora de mayor
+magnitud en los experimentos provino de la formulación acotada del problema en
+MiniZinc. Acotar el \textit{makespan} con una cota inferior y con la solución de
+una heurística de despacho redujo el \textit{gap} medio de Chuffed de 648\,\% a
+17\,\%, una ganancia muy superior a la que aporta cualquier estrategia de
+selección sobre las mismas configuraciones. La comparación con los mismos
+\textit{solvers} sin cotas (Tabla~\ref{tab:portafolios}) lo confirma: sin
+cotas, ni eligiendo en cada instancia la mejor entre Chuffed y Gecode el
+\textit{gap} medio baja del 24.5\,\%, y el margen entre el mejor
+\textit{solver} y el VBS es de apenas 1.0 punto, mientras que con cotas los
+enfoques de portafolio quedan cerca del 13\,\% con un margen de 2.24 puntos.
+Asimismo, la heurística proporciona
+una solución de respaldo que resguarda al portafolio frente a configuraciones
+que no encuentran solución, y en seis instancias prueba la optimalidad sin
+ejecutar ningún \textit{solver}. En este portafolio, aprovechar la
+complementariedad entre sus miembros dependió de contar antes con una
+formulación bien acotada para cada uno de ellos.
+
+%------------------------------------------------------------------------------
+\section{Limitaciones}
+\label{sec:limitaciones}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+  \item El portafolio activo se compone únicamente de dos \textit{solvers} de
+    programación por restricciones en tres configuraciones y, aunque la
+    heurística de despacho participa mediante el cálculo de las cotas y como
+    solución de respaldo, no se incluyeron las metaheurísticas contempladas en
+    el anteproyecto dentro del conjunto de algoritmos seleccionables.
+  \item La evaluación se realizó sobre 236 instancias clásicas de la
+    literatura, de modo que las conclusiones acerca de qué configuración
+    conviene en cada caso están ligadas a esa distribución particular de tamaños
+    y estructuras.
+  \item El margen disponible entre el mejor \textit{solver} individual y el VBS
+    es de 2.24 puntos de \textit{gap}, lo que acota la ganancia máxima que
+    puede alcanzar cualquier estrategia de selección con estas configuraciones.
+  \item Todas las conclusiones corresponden a un presupuesto fijo de 300
+    segundos por instancia, por lo cual el reparto óptimo del tiempo y la
+    conveniencia relativa de un \textit{schedule} podrían variar bajo otros
+    límites de cómputo.
+  \item Las configuraciones que integran un \textit{schedule} se ejecutan de
+    manera independiente, sin transmitir la mejor solución encontrada de una
+    etapa a la siguiente.
+  \item CP-SAT se mantuvo fuera del portafolio como referencia externa con el
+    propósito de estudiar la selección entre configuraciones de desempeño
+    complementario.
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\section{Trabajo futuro}
+\label{sec:trabajo_futuro}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+  \item Transmitir la mejor solución encontrada por una configuración a la
+    siguiente como nueva cota superior o como solución inicial, de manera que
+    las etapas sucesivas del \textit{schedule} aprovechen el avance previo y el
+    reparto del tiempo pueda superar a la selección de una sola configuración.
+  \item Ampliar la composición del portafolio incorporando metaheurísticas como
+    la búsqueda tabú, cuyo comportamiento en instancias grandes difiere del de
+    los \textit{solvers} de programación por restricciones, junto con nuevas
+    estrategias de búsqueda para los \textit{solvers} actuales.
+  \item Emplear generadores de instancias que cubran regiones del espacio de
+    características poco representadas en el conjunto clásico, especialmente
+    aquellas donde la mejor configuración sea más difícil de predecir y un
+    \textit{schedule} secuencial tenga mayor margen de aporte.
+  \item Diseñar reglas de asignación de tiempo basadas en la predicción directa
+    del \textit{gap} esperado en función del tiempo, en lugar de repartir el
+    presupuesto en proporción a la probabilidad de que cada configuración sea la
+    mejor.
+  \item Extraer los descriptores de \texttt{mzn2feat} directamente sobre el
+    modelo con cotas, de modo que las características reflejen el problema
+    acotado que resuelven los \textit{solvers}.
+  \item Extender el esquema de portafolio a variantes como el \textit{Flexible
+    Job Shop} y a formulaciones multiobjetivo del problema, que quedaron fuera
+    del alcance de este trabajo.
+\end{itemize}

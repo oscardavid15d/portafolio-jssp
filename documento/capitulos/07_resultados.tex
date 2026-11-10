@@ -1,0 +1,416 @@
+%==============================================================================
+\chapter{Resultados y análisis}
+\label{cap:resultados}
+%==============================================================================
+% Objetivos específicos 1 y 4. Actividad A16.
+
+La pregunta de investigación plantea determinar en qué medida un
+\textit{schedule} basado en portafolios y guiado por aprendizaje automático
+mejora la eficiencia y la robustez en el JSSP clásico. En este trabajo, esa
+pregunta se responde para un portafolio concreto, formado por tres
+configuraciones de Chuffed y Gecode (Chuffed, Gecode y Chuffed V2) con el
+modelo con cotas, de modo que los resultados y las conclusiones se refieren a
+ese portafolio y a las instancias estudiadas. Para responderla en el
+orden de las cinco preguntas de la Sección~\ref{sec:preguntas}, se examinan a
+continuación los resultados obtenidos sobre las 236 instancias con $lb < ub$
+bajo un presupuesto de 300 segundos por instancia y validación
+\textit{leave-one-out}, salvo que se indique otra cosa. Todas las tablas y
+figuras se generan con el programa \texttt{src/09\_tablas\_figuras.py}.
+
+%------------------------------------------------------------------------------
+\section{Efecto de las cotas}
+\label{sec:res_cotas}
+%------------------------------------------------------------------------------
+
+En la Tabla~\ref{tab:efecto_cotas} se contrasta el desempeño de Chuffed, Gecode
+y CP-SAT entre el modelo original y el modelo con cotas.
+
+\input{tablas/tab_efecto_cotas}
+
+En Chuffed, la incorporación de las cotas modifica de manera sustancial el
+desempeño. Su \textit{gap} medio pasa de 648.3\,\% a 16.8\,\%, puesto que con el
+modelo original se quedaba en programas casi secuenciales en las instancias
+grandes, mientras que con las cotas parte de soluciones al menos tan buenas como
+la heurística. Prueba además la optimalidad en 8 instancias adicionales y, en
+las instancias en que ambos modelos la prueban, el tiempo mediano baja de 60.1 a
+2.8 segundos. Mejora en 207 de las 236 instancias y empeora solo en una.
+
+En Gecode el efecto es más moderado. Su \textit{gap} medio baja de 25.6\,\% a
+21.7\,\% y mejora en 172 instancias, pero empeora en 51. La razón obedece a la
+segunda consecuencia de las cotas descrita en la
+Sección~\ref{sec:modelo_cotas}, ya que Gecode no encuentra en 300 segundos un
+programa mejor que el heurístico en 65 instancias, y en ellas su resultado es
+la $ub$, a veces peor que la solución que encontraba con el modelo original.
+
+En CP-SAT, que ya tenía un buen desempeño con el modelo original, la variación
+es pequeña, con una reducción del \textit{gap} medio de 4.3\,\% a 4.0\,\%,
+mejoras en 82 instancias, retrocesos en 22 y prácticamente los mismos óptimos
+probados. CP-SAT calcula internamente sus propias cotas y soluciones iniciales,
+de modo que la información adicional del modelo le aporta poco.
+
+De este modo, la formulación con cotas sitúa a Chuffed como una configuración
+competitiva dentro del portafolio y sirve de base para las evaluaciones
+siguientes.
+
+%------------------------------------------------------------------------------
+\section{Desempeño de las configuraciones}
+\label{sec:res_solvers}
+%------------------------------------------------------------------------------
+
+La Tabla~\ref{tab:individual} resume el desempeño de las tres configuraciones
+del portafolio con un presupuesto de 300 segundos.
+
+\input{tablas/tab_individual}
+
+Los resultados muestran un reparto claro de fortalezas entre las tres
+configuraciones. Chuffed prueba la optimalidad en 36 instancias, el doble que
+Chuffed V2, y encuentra solución en casi todas. Chuffed V2 tiene el menor
+\textit{gap} medio (15.08\,\%) y constituye, por tanto, el SBS, al obtener la
+mejor solución en 100 instancias, tantas como Chuffed, aunque prueba menos
+óptimos. Gecode es la configuración más débil, ya que solo gana en 3 instancias
+y no encuentra solución en 65. El VBS alcanza un \textit{gap} medio de
+12.83\,\%, de modo que el margen disponible para el portafolio es de 2.24
+puntos. La heurística sola tiene un \textit{gap} de 26.96\,\%.
+
+\subsection{Complementariedad por tamaño y familia}
+
+Al desagregar los resultados por número de operaciones
+(Tabla~\ref{tab:por_tamano}) y cruzar el \textit{gap} de ambas versiones de
+Chuffed (Figura~\ref{fig:dispersion}), se aprecia una complementariedad
+estrechamente ligada al tamaño de la instancia.
+
+\input{tablas/tab_por_tamano}
+
+En las instancias de menos de 300 operaciones, Chuffed es mejor o igual que
+las demás en casi todos los casos (Chuffed V2 gana solo en una), porque prueba
+la optimalidad de la mayoría de las pequeñas y su búsqueda libre supera a la
+estrategia de Chuffed V2. En $20 \times 15$ y $20 \times 20$ las victorias se
+reparten, y a partir de $30 \times 15$ Chuffed V2 gana en la mayoría de las
+instancias, con diferencias de hasta 16 puntos de \textit{gap} medio (en
+$50 \times 10$). Gecode solo gana en tres instancias grandes de la familia
+\texttt{ta}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{dispersion_configuraciones.pdf}
+  \caption{\textit{Gap} de Chuffed frente al de Chuffed V2 en cada instancia,
+  coloreado según la configuración que obtiene la mejor solución. Los puntos
+  bajo la diagonal son instancias en que Chuffed V2 es mejor.}
+  \label{fig:dispersion}
+\end{figure}
+
+Un comportamiento análogo aparece al agrupar las instancias por familia en la
+Tabla~\ref{tab:por_familia}, donde Chuffed domina en las familias de instancias
+pequeñas y medianas (\texttt{ft}, \texttt{la}, \texttt{abz}, \texttt{orb}), las
+dos configuraciones de Chuffed se reparten las victorias en \texttt{swv},
+\texttt{yn} y \texttt{ta}, y Chuffed V2 domina en \texttt{dmu}, con 65 de 80
+victorias.
+
+\input{tablas/tab_por_familia}
+
+A partir de esta distribución se observa que acertar en la elección entre
+Chuffed y Chuffed V2 basta para capturar casi todo el margen disponible, dado
+que Gecode aporta muy poco al VBS. Sin embargo, la frontera entre ambas
+configuraciones carece de un corte único, puesto que en los tamaños de
+$20 \times 15$ a $30 \times 15$ las victorias están repartidas y las
+características de la instancia, adicionales al tamaño, pueden inclinar la
+decisión.
+
+\subsection{Comportamiento en el tiempo}
+
+La evolución del \textit{gap} medio de cada configuración según el tiempo
+transcurrido puede seguirse en la Tabla~\ref{tab:anytime} y en la
+Figura~\ref{fig:anytime}.
+
+\input{tablas/tab_anytime}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{anytime.pdf}
+  \caption{\textit{Gap} medio de cada configuración y del VBS en función del
+  tiempo (escala logarítmica).}
+  \label{fig:anytime}
+\end{figure}
+
+Chuffed V2 encuentra buenas soluciones muy pronto, pues a los 10 segundos su
+\textit{gap} medio ya es de 16.8\,\%, cercano a su valor final, mientras que
+Chuffed necesita los 300 segundos para llegar a 16.8\,\%. Gecode casi no
+mejora después de los primeros segundos. Las dos configuraciones de Chuffed,
+en cambio, continúan mejorando hasta el final del presupuesto, lo que anticipa
+una pérdida de calidad potencial para cualquier estrategia que fraccione el
+tiempo entre ellas.
+
+%------------------------------------------------------------------------------
+\section{\textit{Winner Takes All} frente al \textit{schedule} secuencial}
+\label{sec:res_wta_schedule}
+%------------------------------------------------------------------------------
+
+La Tabla~\ref{tab:portafolios} y la Figura~\ref{fig:portafolios} comparan
+todas las estrategias.
+
+\subsection{Todas las estrategias superan al mejor \textit{solver} individual}
+
+Todos los métodos de portafolio cierran entre el 76\,\% y el 87\,\% de la
+brecha entre el SBS y el VBS, y la mejora frente al SBS es
+estadísticamente significativa en todos los casos (por ejemplo, 1.96 puntos
+para WTA $k$-NN, con un intervalo de confianza del 95\,\% de
+$[1.48, 2.49]$, y 1.80 puntos para el \textit{schedule} con ML, con
+$[1.36, 2.30]$). Asimismo, todos los métodos recuperan los 36 óptimos de
+Chuffed o casi todos, que el SBS (Chuffed V2) pierde a la mitad. Incluso la
+regla por tamaño, que usa una sola característica, cierra el 76\,\% de la
+brecha.
+
+\input{tablas/tab_portafolios}
+
+Las filas sin cotas de la Tabla~\ref{tab:portafolios} corresponden al
+portafolio planteado al inicio del trabajo, formado por Chuffed y Gecode con
+el modelo original. Con ese modelo, el \textit{gap} medio de Chuffed era de
+648.3\,\% y el de Gecode de 25.6\,\%, y aun eligiendo en cada instancia la
+mejor de las dos, el VBS no bajaba del 24.5\,\%, casi el doble del 13\,\%
+que alcanzan los enfoques de portafolio con el modelo con cotas. Además, el
+margen entre el mejor \textit{solver} y el VBS era de apenas 1.0 puntos,
+frente a 2.24 con cotas, de modo que el acotamiento del modelo es lo que le
+da al portafolio espacio para mejorar. Chuffed V2 se incorporó después de
+introducir las cotas, como una segunda estrategia de búsqueda sobre ese
+modelo, por lo que no se evaluó con el modelo original.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{portafolios_gap.pdf}
+  \caption{\textit{Gap} medio de cada método. Las líneas punteadas marcan el
+  SBS (gris) y el VBS (verde).}
+  \label{fig:portafolios}
+\end{figure}
+
+\subsection{La selección supera en promedio al reparto del tiempo}
+
+Con los datos de este trabajo, la mejor estrategia en promedio es
+\textit{Winner Takes All} con las 85 características (13.12\,\%). El análisis
+pareado frente a las demás estrategias, instancia por instancia
+(Tabla~\ref{tab:comparaciones}), muestra que WTA obtiene un
+\textit{makespan} igual o mejor que los \textit{schedules} en
+la mayoría de las instancias en que difieren. La diferencia media frente a
+SUNNY es pequeña y su intervalo de confianza incluye el cero, pero WTA es
+mejor en 70 instancias y peor en 19. Frente al \textit{schedule} estático y
+al \textit{schedule} con ML la ventaja es significativa, aunque de pocas
+décimas.
+
+\input{tablas/tab_comparaciones}
+
+Este comportamiento responde a dos factores observados en las secciones
+previas. Primero, la selección sigue un patrón por tamaño muy marcado, lo que
+permite a WTA obtener el mismo resultado que el VBS en 202 de las 236
+instancias. Segundo, las dos configuraciones de Chuffed siguen mejorando hasta
+los 300 segundos, de modo que reducir el tiempo asignado a la configuración
+adecuada para destinarlo a otra disminuye la calidad alcanzada. Un
+\textit{schedule} asume esa reducción en muchas instancias para protegerse de
+un error de selección que, en este conjunto, ocurre pocas veces.
+
+\subsection{El \textit{schedule} es más robusto}
+
+El promedio constituye solo una dimensión del desempeño. La motivación de los
+\textit{schedules} es reducir el riesgo de una mala selección, y la
+Tabla~\ref{tab:robustez} muestra que en ese aspecto sí son mejores. Para cada
+método se mide la pérdida frente al VBS, es decir, cuántos puntos de
+\textit{gap} pierde en cada instancia respecto a la mejor configuración.
+
+\input{tablas/tab_robustez}
+
+WTA tiene la menor pérdida media, pero también la mayor pérdida máxima entre
+los portafolios (7.82 puntos) y cuatro instancias en las que pierde más de 5
+puntos, correspondientes a los casos en que elige la configuración equivocada.
+Los \textit{schedules} cometen más errores pequeños, porque siempre ceden algo
+de tiempo, pero limitan los grandes. El \textit{schedule} estático nunca pierde
+más de 4.31 puntos, y SUNNY combina una pérdida media cercana a la de WTA con
+menos instancias por encima de 2 puntos.
+
+Respecto a la pregunta P3, la comparación refleja un compromiso entre el
+desempeño promedio y el control del riesgo. Mientras que seleccionar una sola
+configuración con WTA es ligeramente mejor en promedio, en el peor caso los
+\textit{schedules} resultan más robustos, por lo cual la elección entre ambos
+esquemas depende de si se prioriza el desempeño medio o acotar el efecto de una
+mala decisión.
+
+\subsection{Sensibilidad al número de vecinos}
+
+Como se observa en la Tabla~\ref{tab:sensibilidad_k}, ni WTA ni SUNNY dependen
+mucho de $k$, puesto que entre $k = 3$ y $k = 30$ el \textit{gap} medio varía
+menos de 0.15 puntos. El valor $k = 15$ no se ajustó con estos resultados,
+sino que se fijó de antemano como la raíz cuadrada del número de instancias
+de entrenamiento, criterio que usa SUNNY-CP \citep{amadini2015sunnycp}, y
+está entre los mejores para ambos métodos.
+
+\input{tablas/tab_sensibilidad_k}
+
+%------------------------------------------------------------------------------
+\section{Aporte de las características y del aprendizaje automático}
+\label{sec:res_prediccion}
+%------------------------------------------------------------------------------
+
+\subsection{Conjuntos de características}
+
+En WTA, la unión de las características de \texttt{mzn2feat} y las propias
+da el mejor resultado (13.12\,\%), seguida de \texttt{mzn2feat} sola
+(13.23\,\%) y de las propias solas (13.34\,\%). Las diferencias son pequeñas y
+afectan a pocas instancias, ya que frente a cada conjunto por separado el
+resultado de la unión cambia en solo 11 instancias. En SUNNY, \texttt{mzn2feat}
+y la unión empatan (13.20\,\%). Que las características genéricas y las propias
+den resultados tan parecidos es coherente con la estructura de la
+Sección~\ref{sec:res_solvers}, en la cual gran parte de la decisión depende del
+tamaño, magnitud que ambos conjuntos describen bien.
+
+Frente a la regla por tamaño, que usa solo el número de operaciones, WTA con
+todas las características reduce el \textit{gap} en 0.25 puntos
+(Tabla~\ref{tab:comparaciones}). Las características adicionales aportan,
+sobre todo, en la zona de transición entre Chuffed y Chuffed V2.
+
+\subsection{Calidad de los modelos de predicción}
+
+En la Tabla~\ref{tab:ml_calidad} se detallan las métricas predictivas de los
+tres modelos del \textit{schedule} con ML, medidas con sus predicciones fuera
+de muestra.
+
+\input{tablas/tab_ml_calidad}
+
+El clasificador de resolución es muy preciso, con un área bajo la curva ROC
+(AUC) de 0.97 a 0.98 y una exactitud de entre el 94\,\% y el 97\,\% para las
+tres configuraciones, lo que indica que en este conjunto resulta sencillo
+distinguir las instancias cuyos óptimos pueden probarse en 300 segundos. El
+regresor de tiempo es el modelo más débil, con un error relativo mediano del
+89.8\,\%, del mismo orden que el propio tiempo, razón por la cual el
+\textit{schedule} asigna el doble del tiempo predicho. Su bajo desempeño
+tiene varias causas posibles. Solo 60 de las 708 ejecuciones prueban el
+óptimo y sirven para entrenarlo, casi todas en instancias pequeñas (100
+operaciones de mediana, frente a 425 en el conjunto completo), y sus tiempos
+van de 0.3 a 273 segundos. Además, el tiempo que tarda un \textit{solver} en
+probar el óptimo depende en buena parte de su recorrido de búsqueda, que las
+características estáticas de la instancia no describen, y las ejecuciones
+que agotan los 300 segundos no indican cuánto habrían tardado. El clasificador de la
+mejor configuración acierta en el 76.7\,\% de las instancias, con un AUC de
+0.85 a 0.86 para las dos configuraciones de Chuffed y de 0.70 para Gecode, que
+gana muy pocas veces.
+
+\subsection{\textit{Schedule} con ML frente al \textit{schedule} estático}
+
+La Tabla~\ref{tab:ml_vs_estatico} compara el \textit{schedule} con ML con el
+\textit{schedule} estático, que reparte el tiempo igual en todas las
+instancias.
+
+\input{tablas/tab_ml_vs_estatico}
+
+El \textit{schedule} con ML adapta el reparto a cada instancia (produce 181
+\textit{schedules} distintos) y es mejor que el estático en 68 instancias y
+peor en 34. Sin embargo, la diferencia media es de solo 0.03 puntos, su
+intervalo de confianza incluye el cero y la prueba de Wilcoxon no es
+significativa al 5\,\%. Los dos métodos son, por tanto, equivalentes en
+promedio.
+
+El \textit{schedule} con ML queda por detrás de WTA porque reparte el tiempo en
+proporción a la probabilidad de que cada configuración sea la mejor, y esa
+probabilidad rara vez es cercana a 1, de modo que incluso cuando el
+clasificador acierta, cede parte del tiempo a las otras configuraciones. Se
+probó también una versión del clasificador que pondera cada instancia de
+entrenamiento por el costo de equivocarse, sin mejoras apreciables (13.26\,\%),
+por lo que no se adoptó.
+
+En relación con la pregunta P4, las características de la instancia aportan con
+claridad, dado que todas las estrategias que las usan superan al SBS y a la
+regla por tamaño. Aunque el aprendizaje automático produce modelos precisos, su
+empleo para repartir el tiempo obtiene un desempeño medio equivalente al de un
+reparto fijo bien elegido e inferior al de la selección por vecinos más
+cercanos.
+
+%------------------------------------------------------------------------------
+\section{Comparación con el \textit{solver} de referencia}
+\label{sec:res_referencia}
+%------------------------------------------------------------------------------
+
+CP-SAT se ejecutó con el modelo con cotas bajo el mismo protocolo que las
+configuraciones del portafolio. Sus cifras globales ya se incluyeron como
+referencia en la Tabla~\ref{tab:individual} (un \textit{gap} medio de
+3.97\,\%, 62 óptimos probados y ninguna instancia sin solución), mientras que
+el desglose frente al portafolio por número de operaciones se presenta en la
+Tabla~\ref{tab:cpsat}.
+
+\input{tablas/tab_cpsat}
+
+CP-SAT supera ampliamente al portafolio. Su \textit{gap} medio es la tercera
+parte del VBS (3.97\,\% frente a 12.83\,\%), prueba la optimalidad en 62
+instancias frente a 36 y obtiene un \textit{makespan} igual o mejor que la
+mejor configuración del portafolio en 235 de las 236 instancias, con la única
+excepción de \texttt{dmu76}. La diferencia crece con el tamaño, ya que en las
+instancias de hasta 150 operaciones todos los métodos están cerca del óptimo,
+pero en las de más de 300 operaciones CP-SAT mantiene un \textit{gap} de 4 a
+9\,\%, mientras que el portafolio se sitúa entre el 17 y el 19\,\%. Asimismo,
+CP-SAT alcanza a los 10 segundos un \textit{gap} medio de 12.9\,\%, similar al
+del portafolio a los 300 segundos.
+
+Este resultado confirma lo observado con el modelo original
+(Sección~\ref{sec:ejecucion_solvers}) y respalda la decisión de mantener a
+CP-SAT fuera del portafolio, puesto que el VBS calculado junto con CP-SAT
+coincide con este último en todas las instancias salvo una. La ventaja de
+CP-SAT proviene de su arquitectura, que combina búsqueda con aprendizaje de
+cláusulas, relajaciones lineales y búsqueda local sobre las soluciones
+encontradas \citep{perron2023}. La comparación muestra, por tanto, que la
+selección entre configuraciones de \textit{solvers} complementarios mejora de
+forma consistente al mejor de ellos, aunque sin compensar la diferencia frente
+a un \textit{solver} de nivel superior.
+
+%------------------------------------------------------------------------------
+\section{Discusión}
+\label{sec:discusion}
+%------------------------------------------------------------------------------
+
+\subsection{Respuesta a las preguntas de evaluación}
+
+\begin{enumerate}[label=\textbf{P\arabic*.}, leftmargin=*]
+  \item \textbf{Efecto de las cotas.} Es el factor que más influye en el
+    desempeño. Reduce el \textit{gap} de Chuffed de 648\,\% a 17\,\% y lo
+    convierte en la base del portafolio, mientras que en Gecode la mejora es
+    moderada.
+  \item \textbf{Complementariedad.} Las configuraciones son complementarias y
+    muestran un patrón bien definido, con ventaja de Chuffed en las instancias
+    pequeñas y medianas, de Chuffed V2 en las grandes y un aporte marginal de
+    Gecode. El margen entre el SBS y el VBS es de 2.24 puntos.
+  \item \textbf{WTA frente a \textit{schedule}.} En promedio, con estas
+    configuraciones, la selección de una configuración con WTA es la mejor estrategia (87\,\% de la brecha
+    cerrada), en tanto que los \textit{schedules} quedan algo por detrás en el
+    promedio pero resultan más robustos frente a errores de selección.
+  \item \textbf{Características y aprendizaje automático.} Las características
+    permiten cerrar entre el 77\,\% y el 87\,\% de la brecha. Los modelos de
+    aprendizaje son precisos, pero el \textit{schedule} construido con ellos
+    es equivalente al estático.
+  \item \textbf{Estado del arte.} CP-SAT, usado como referencia externa,
+    supera a este portafolio en casi todas las instancias (3.97\,\% de
+    \textit{gap} frente a 13.12\,\%). El portafolio mejora a sus miembros,
+    pero no alcanza a CP-SAT.
+\end{enumerate}
+
+\subsection{Amenazas a la validez}
+
+\begin{itemize}
+  \item El margen disponible entre el SBS y el VBS es de 2.24 puntos de
+    \textit{gap}, y las diferencias entre los métodos de portafolio son de
+    décimas, razón por la cual las comparaciones se apoyan en pruebas pareadas
+    y no solo en promedios.
+  \item Todos los resultados se obtienen sobre instancias clásicas de la
+    literatura (236 en la evaluación del portafolio) y, aunque la validación \textit{leave-one-out} evita evaluar
+    con instancias de entrenamiento, las conclusiones podrían variar en
+    instancias de otra distribución o estructura.
+  \item Los candidatos del \textit{schedule} estático y la regla de reparto del
+    \textit{schedule} con ML se definieron tras analizar la campaña, por lo que
+    aunque la elección final se calcula dentro de cada partición de
+    entrenamiento, el conjunto de alternativas estuvo guiado por los datos.
+  \item Las mejores soluciones conocidas (BKS) corresponden a los resultados
+    recopilados hasta 2020 \citep{weise2019jssp}, por lo cual en las instancias
+    abiertas el \textit{gap} es una cota inferior de la distancia real al
+    óptimo, condición que afecta por igual a todos los métodos.
+  \item Las configuraciones dentro de un \textit{schedule} se ejecutan sin
+    compartir información, de modo que un portafolio que transmitiera la mejor
+    solución de una configuración a la siguiente como nueva cota superior
+    podría obtener mejores resultados que los reportados.
+  \item Cada configuración se ejecutó una sola vez por instancia y, aunque los
+    \textit{solvers} son deterministas con parámetros fijos, los tiempos de
+    pared presentan pequeñas fluctuaciones que pueden alterar la última
+    solución alcanzada cerca del límite.
+\end{itemize}

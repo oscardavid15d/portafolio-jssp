@@ -1,0 +1,243 @@
+%==============================================================================
+\chapter{Introducción}
+\label{cap:introduccion}
+%==============================================================================
+
+%------------------------------------------------------------------------------
+\section{Contexto y planteamiento del problema}
+\label{sec:contexto}
+%------------------------------------------------------------------------------
+% Fuente: Anteproyecto, Cap. 1 (Introducción) y Cap. 2 (Planteamiento).
+
+El Job Shop Scheduling Problem (JSSP) es uno de los problemas más estudiados en
+el campo de la optimización combinatoria. En este problema, un conjunto de
+trabajos debe ser procesado en distintas máquinas, cumpliendo para cada trabajo
+una secuencia específica de operaciones. El objetivo suele ser minimizar el
+tiempo total de finalización (\textit{makespan}), aunque pueden considerarse
+otros criterios como el retraso promedio o la utilización de recursos
+\citep{pinedo2022}.
+
+El JSSP es un problema NP-duro, por lo que su resolución eficiente requiere
+algoritmos avanzados, entre ellos heurísticas, metaheurísticas y métodos
+híbridos. Sin embargo, el rendimiento de estos algoritmos depende en gran
+medida de las características de cada instancia, lo que hace difícil determinar
+de antemano cuál ofrecerá los mejores resultados. En la práctica, seleccionar
+manualmente el algoritmo más apropiado es ineficiente y requiere experiencia
+especializada.
+
+Para abordar esta incertidumbre, los portafolios de algoritmos se han
+convertido en una estrategia efectiva, puesto que combinan múltiples métodos y
+seleccionan aquel que se espera tenga el mejor desempeño
+\citep{smithmiles2009}. No obstante, la mayoría de los enfoques adoptan la
+política \textit{Winner Takes All}, que consiste en seleccionar un solo
+algoritmo por instancia. Este enfoque es vulnerable a errores de selección y no
+aprovecha la complementariedad entre algoritmos. Por ello, junto a selectores por
+instancia como SATzilla \citep{xu2008satzilla}, han surgido métodos como
+CPHydra \citep{omahony2008cphydra} y SUNNY \citep{amadini2014sunny}, que
+emplean técnicas de aprendizaje automático para definir un \textit{schedule}
+de ejecución, es decir, el orden y el tiempo asignado a cada algoritmo dentro
+del portafolio. Estos sistemas han demostrado
+mejorar el rendimiento global y la robustez en la resolución de problemas
+complejos.
+
+Este trabajo aplica esa idea al JSSP clásico mediante el diseño de un
+portafolio de algoritmos y un esquema de ejecución planificado con
+\textit{Machine Learning}, capaz de decidir dinámicamente la secuencia y la
+duración de ejecución de los métodos más apropiados para cada instancia.
+
+%------------------------------------------------------------------------------
+\section{Formulación del problema}
+\label{sec:formulacion}
+%------------------------------------------------------------------------------
+% Fuente: Anteproyecto, Cap. 2 (Pregunta problema).
+
+La pregunta que guía el trabajo es la siguiente:
+
+\begin{quote}
+  ¿Cómo diseñar un \textit{schedule} de ejecución basado en portafolios que
+  determine el orden y tiempo óptimo de ejecución de algoritmos, utilizando
+  \textit{Machine Learning}, para mejorar la eficiencia y robustez en la
+  resolución del Job Shop Scheduling Problem clásico?
+\end{quote}
+
+Para responderla, el trabajo construye un portafolio de algoritmos
+complementado por un modelo de selección automática que indica en qué orden
+ejecutar los algoritmos y durante cuánto tiempo, es decir, el \textit{schedule}
+de ejecución.
+
+%------------------------------------------------------------------------------
+\section{Justificación}
+\label{sec:justificacion}
+%------------------------------------------------------------------------------
+% Fuente: Anteproyecto, Cap. 3.1 (económica) y 3.2 (académica).
+
+En el ámbito académico, el trabajo aporta al estudio del problema de selección
+de algoritmos (\textit{Algorithm Selection Problem}), una línea de
+investigación que combina el aprendizaje automático y la optimización
+combinatoria. Ofrece un entorno experimental para explorar la caracterización
+de instancias del JSSP, la aplicación de técnicas de clasificación y regresión
+para predecir el rendimiento de los algoritmos, y la integración de modelos de
+aprendizaje con métodos de optimización tradicionales, como la búsqueda tabú,
+los algoritmos genéticos o el recocido simulado.
+
+Desde la perspectiva económica y productiva, una planificación ineficiente en
+entornos industriales genera costos por tiempos muertos, sobreutilización de
+recursos y retrasos en la entrega de productos. Un portafolio inteligente puede
+reducir los costos operativos mediante una mejor asignación de recursos,
+disminuir el tiempo total de procesamiento (\textit{makespan}) e incrementar la
+productividad de la planta. En el plano computacional, seleccionar
+adecuadamente el algoritmo reduce tanto el tiempo de cómputo como el consumo de
+recursos.
+
+%------------------------------------------------------------------------------
+\section{Objetivos}
+\label{sec:objetivos}
+%------------------------------------------------------------------------------
+% Fuente: Anteproyecto, Cap. 4.1 y 4.2 (texto aprobado, no modificar sin
+% autorización del director).
+
+\subsection{Objetivo general}
+
+Desarrollar un \textit{schedule} de ejecución basado en portafolios para el Job
+Shop Scheduling Problem clásico, utilizando técnicas de \textit{Machine
+Learning}.
+
+\subsection{Objetivos específicos}
+
+\begin{enumerate}[label=\arabic*., leftmargin=1.27cm, itemsep=0.3em]
+  \item Analizar y comparar distintos enfoques de portafolios de algoritmos
+    aplicados al Job Shop Scheduling Problem, incluyendo estrategias
+    \textit{Winner Takes All} y planificación secuencial.
+  \item Identificar y extraer características relevantes de las instancias del
+    JSSP.
+  \item Implementar un portafolio que integre la predicción y selección
+    automática del algoritmo más adecuado.
+  \item Validar experimentalmente el portafolio mediante pruebas con instancias
+    de referencia.
+\end{enumerate}
+
+%------------------------------------------------------------------------------
+\section{Alcance y limitaciones}
+\label{sec:alcance}
+%------------------------------------------------------------------------------
+% Fuente: Anteproyecto, Cap. 5.
+
+El trabajo se centra en el estudio y la resolución del Job Shop Scheduling
+Problem clásico, con la minimización del \textit{makespan} como criterio
+principal de optimización. Para ello se trabaja con un conjunto limitado pero
+representativo de algoritmos, que abarca métodos heurísticos, metaheurísticos y
+exactos, con el propósito de evaluar su comportamiento ante diferentes tipos de
+instancias. El enfoque se basa en modelos de aprendizaje supervisado, que se
+entrenan y validan con conjuntos de datos de referencia.
+
+El portafolio se limita a la versión clásica del problema. No incluye variantes
+como el Flexible Job Shop ni las versiones multiobjetivo, que se consideran
+líneas de trabajo futuro.
+
+En la práctica, el conjunto de algoritmos quedó compuesto por dos
+\textit{solvers} exactos de programación por restricciones, Chuffed y Gecode,
+en tres configuraciones, junto con una heurística de despacho que calcula una
+cota superior del \textit{makespan} y una solución de respaldo. OR-Tools CP-SAT
+se usa como \textit{solver} de referencia fuera del portafolio. La evaluación se
+hace sobre 242 instancias clásicas de la literatura con un límite de 300
+segundos por instancia. Las limitaciones que se derivan de estas decisiones se
+discuten en la Sección~\ref{sec:limitaciones}.
+
+%------------------------------------------------------------------------------
+\section{Resultados obtenidos y contribuciones}
+\label{sec:resultados_contribuciones}
+%------------------------------------------------------------------------------
+% Fuente: Anteproyecto, Cap. 4.3 y Tabla 4.1. Al cierre del trabajo, la
+% columna de resultados esperados se reemplaza por los resultados obtenidos.
+
+La Tabla~\ref{tab:objetivos_resultados} relaciona cada objetivo específico con
+el resultado obtenido y con el capítulo de este documento donde se presenta.
+
+\begin{table}[H]
+  \centering
+  \small
+  \singlespacing
+  \caption{Objetivos específicos, resultados obtenidos y capítulo donde se presentan.}
+  \label{tab:objetivos_resultados}
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.30\textwidth}
+                               >{\raggedright\arraybackslash}X
+                               >{\centering\arraybackslash}p{0.13\textwidth}}
+    \toprule
+    \textbf{Objetivo específico} & \textbf{Resultado obtenido} & \textbf{Capítulo} \\
+    \midrule
+    1. Analizar y comparar enfoques de portafolios (\textit{Winner Takes All} y
+    planificación secuencial)
+      & Comparación de \textit{Winner Takes All}, SUNNY, un \textit{schedule}
+        estático y un \textit{schedule} con aprendizaje automático, en calidad
+        de solución, óptimos probados, tiempo (PAR10) y robustez.
+      & \ref{cap:portafolio}, \ref{cap:resultados} \\
+    \addlinespace
+    2. Identificar y extraer características de las instancias del JSSP
+      & 65 características de \texttt{mzn2feat} y 20 propias del JSSP, junto
+        con una base de conocimiento que incluye el desempeño y las
+        trayectorias de cada configuración.
+      & \ref{cap:caracterizacion} \\
+    \addlinespace
+    3. Implementar un portafolio con predicción y selección automática del
+    algoritmo
+      & Prototipo que calcula cotas, extrae características y construye el
+        orden y el tiempo de ejecución por instancia con tres modelos de
+        aprendizaje automático.
+      & \ref{cap:portafolio} \\
+    \addlinespace
+    4. Validar experimentalmente el portafolio con instancias de referencia
+      & Validación \textit{leave-one-out} sobre 236 instancias y tabla
+        comparativa entre las configuraciones individuales con y sin cotas,
+        los métodos de portafolio y el VBS.
+      & \ref{cap:diseno}, \ref{cap:resultados} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Las principales contribuciones del trabajo son:
+
+\begin{itemize}
+  \item Un modelo con cotas para el JSSP en MiniZinc, que combina una cota
+    inferior con la solución de la heurística de Giffler y Thompson y reduce el
+    \textit{gap} medio de Chuffed de 648\,\% a 17\,\%. La comparación con los
+    mismos \textit{solvers} sin cotas muestra que, sin ellas, ni siquiera
+    eligiendo en cada instancia la mejor configuración el \textit{gap} medio
+    baja del 24.5\,\%, mientras que con cotas todos los enfoques de portafolio
+    quedan cerca del 13\,\%.
+  \item Una base de conocimiento con trayectorias, que registra cuándo encontró
+    cada configuración cada solución y permite evaluar cualquier
+    \textit{schedule} sin volver a ejecutar los \textit{solvers}.
+  \item Un conjunto de 20 características propias del JSSP, que se calculan en
+    menos de un segundo y obtienen resultados comparables a los de
+    \texttt{mzn2feat}.
+  \item Una comparación controlada de estrategias de portafolio, que muestra
+    que, con este portafolio y estas instancias, la selección de una
+    configuración es mejor en
+    promedio y el \textit{schedule} es más robusto frente a errores de
+    selección.
+  \item Un repositorio reproducible con las instancias, los modelos, el código,
+    los resultados de todas las campañas y los programas que generan las tablas
+    y figuras de este documento.
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\section{Organización del documento}
+\label{sec:organizacion}
+%------------------------------------------------------------------------------
+
+El resto del documento se organiza en siete capítulos y cuatro anexos. El
+Capítulo~\ref{cap:marco} presenta el marco de referencia sobre el JSSP, la
+programación por restricciones, el problema de selección de algoritmos, los
+portafolios de algoritmos, el uso del aprendizaje automático para predecir el
+desempeño de los algoritmos y el estado del arte. El
+Capítulo~\ref{cap:problema} define formalmente el problema y la metodología de
+trabajo. El Capítulo~\ref{cap:caracterizacion} describe las instancias, la
+extracción de características y la construcción del conjunto de datos. El
+Capítulo~\ref{cap:portafolio} presenta el diseño y la implementación del
+portafolio, incluidas las estrategias \textit{Winner Takes All} y de
+\textit{schedule} secuencial. El Capítulo~\ref{cap:diseno} expone el diseño
+experimental y el Capítulo~\ref{cap:resultados}, los resultados y su análisis.
+Finalmente, el Capítulo~\ref{cap:conclusiones} recoge las conclusiones, las
+limitaciones y el trabajo futuro. Los anexos contienen los resultados por
+instancia, el catálogo de características, la configuración de los
+experimentos y una guía de reproducción.
