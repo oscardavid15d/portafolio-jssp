@@ -1,0 +1,3 @@
+id,bloque,rep,instancia,variante,solver,busqueda_libre,limite_s,modo,makespan,optimo,estado,tiempo_pared_s,tiempo_minizinc_s,returncode,inicio,fin,validacion,stderr,trayectoria
+0_humo|1|ft06|V1_cotas|chuffed,0_humo,1,ft06,V1_cotas,chuffed,1,20,serie,55,True,OPTIMAL,3.391,3.34,0,2026-11-07 01:05:17,2026-11-07 01:05:21,OK,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds,3.34:60|3.34:59|3.34:58|3.34:57|3.34:56|3.34:55
+0_humo|1|ft06|V1_cotas|gecode,0_humo,1,ft06,V1_cotas,gecode,1,20,serie,55,True,OPTIMAL,0.978,0.93,0,2026-11-07 01:05:21,2026-11-07 01:05:22,OK,,0.93:60|0.93:58|0.93:56|0.93:55

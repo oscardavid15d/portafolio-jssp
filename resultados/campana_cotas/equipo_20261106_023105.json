@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-11-06 02:31:02",
+  "python": "3.12.6",
+  "plataforma": "Windows-11-10.0.26300-SP0",
+  "procesadores_logicos": 16,
+  "version_ejecutor": "1.2",
+  "CPU": "AMD Ryzen 7 5800X 8-Core Processor",
+  "Nucleos": "8",
+  "Hilos": "16",
+  "MaxMHz": "3801",
+  "RAM_GB": "31.9",
+  "RAM_MHz": "3200,3200,3200,3200",
+  "SO": "Microsoft Windows 11 Pro 10.0.26300",
+  "plan_energia": "GUID de plan de energía: 381b4222-f694-41f0-9685-ff5bb260df2e  (Equilibrado)",
+  "minizinc_version": "MiniZinc to FlatZinc converter, version 2.9.1, build 1695969802\nCopyright (C) 2014-2025 Monash University, NICTA, Data61",
+  "solvers": {
+    "org.chuffed.chuffed": "0.13.2",
+    "org.gecode.gecode": "6.3.0"
+  }
+}
