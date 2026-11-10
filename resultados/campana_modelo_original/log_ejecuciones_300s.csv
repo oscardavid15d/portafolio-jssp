@@ -1,0 +1,728 @@
+instancia,solver,estado,tiempo,makespan,returncode,stderr
+ft06,chuffed,OPTIMAL,0.437,55,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ft06,gecode,OPTIMAL,0.416,55,0,
+ft06,cpsat,OPTIMAL,0.338,55,0,
+la05,chuffed,OPTIMAL,5.507,593,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la05,gecode,OPTIMAL,0.327,593,0,
+la05,cpsat,OPTIMAL,0.354,593,0,
+la01,chuffed,OPTIMAL,8.899,666,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la01,gecode,OPTIMAL,133.197,666,0,
+la01,cpsat,OPTIMAL,0.398,666,0,
+abz5,chuffed,OPTIMAL,152.106,1234,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu01,chuffed,SATISFIABLE,301.122,22441,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu10,chuffed,SATISFIABLE,301.143,31548,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu02,chuffed,SATISFIABLE,301.144,23291,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+orb01,chuffed,SATISFIABLE,300.155,1072,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv01,chuffed,SATISFIABLE,300.286,1955,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+abz5,gecode,SATISFIABLE,300.077,1308,0,
+abz5,cpsat,OPTIMAL,7.987,1234,0,
+dmu01,gecode,SATISFIABLE,300.097,3239,0,
+dmu02,gecode,SATISFIABLE,300.098,3547,0,
+dmu10,gecode,SATISFIABLE,300.102,3665,0,
+orb01,gecode,SATISFIABLE,300.074,1169,0,
+orb01,cpsat,OPTIMAL,38.145,1059,0,
+swv01,gecode,SATISFIABLE,300.076,1911,0,
+ta01js,chuffed,SATISFIABLE,301.069,6905,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu01,cpsat,SATISFIABLE,301.091,2661,0,
+dmu10,cpsat,SATISFIABLE,301.084,3033,0,
+dmu02,cpsat,SATISFIABLE,301.089,2793,0,
+ta02js,chuffed,SATISFIABLE,301.084,6523,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+swv01,cpsat,SATISFIABLE,301.079,1420,0,
+ta01js,gecode,SATISFIABLE,300.09,1677,0,
+ta01js,cpsat,OPTIMAL,15.443,1231,0,
+yn1,chuffed,SATISFIABLE,300.728,7748,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta02js,gecode,SATISFIABLE,300.074,1423,0,
+ta02js,cpsat,OPTIMAL,234.499,1244,0,
+yn1,gecode,SATISFIABLE,300.077,1074,0,
+yn1,cpsat,SATISFIABLE,301.064,906,0,
+abz6,chuffed,OPTIMAL,114.092,943,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+abz7,chuffed,SATISFIABLE,301.132,3882,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu03,chuffed,SATISFIABLE,301.136,23952,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu04,chuffed,SATISFIABLE,301.153,25061,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+abz9,chuffed,SATISFIABLE,301.175,4055,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+abz8,chuffed,SATISFIABLE,301.179,4318,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+abz6,gecode,SATISFIABLE,300.187,978,0,
+abz6,cpsat,OPTIMAL,1.539,943,0,
+abz7,gecode,SATISFIABLE,300.114,789,0,
+dmu03,gecode,SATISFIABLE,300.123,3438,0,
+dmu04,gecode,SATISFIABLE,300.116,3493,0,
+abz9,gecode,SATISFIABLE,300.117,817,0,
+abz8,gecode,SATISFIABLE,300.118,825,0,
+dmu05,chuffed,SATISFIABLE,301.025,25379,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+abz9,cpsat,SATISFIABLE,300.174,690,0,
+abz7,cpsat,SATISFIABLE,301.087,676,0,
+dmu04,cpsat,SATISFIABLE,301.085,2718,0,
+dmu03,cpsat,SATISFIABLE,301.097,2764,0,
+abz8,cpsat,SATISFIABLE,301.089,685,0,
+dmu07,chuffed,SATISFIABLE,300.968,30500,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu09,chuffed,SATISFIABLE,301.026,31106,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu06,chuffed,SATISFIABLE,301.151,34173,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu08,chuffed,SATISFIABLE,301.162,34383,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu11,chuffed,SATISFIABLE,301.179,35102,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu05,chuffed,SATISFIABLE,301.2,25533,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu07,gecode,SATISFIABLE,300.245,3804,0,
+dmu09,gecode,SATISFIABLE,300.205,3672,0,
+dmu06,gecode,SATISFIABLE,300.248,4033,0,
+dmu08,gecode,SATISFIABLE,300.237,3964,0,
+dmu11,gecode,SATISFIABLE,300.225,4701,0,
+dmu05,gecode,SATISFIABLE,300.225,3559,0,
+dmu06,cpsat,SATISFIABLE,300.201,3347,0,
+dmu08,cpsat,SATISFIABLE,300.268,3218,0,
+dmu09,cpsat,SATISFIABLE,301.089,3128,0,
+dmu07,cpsat,SATISFIABLE,301.091,3180,0,
+dmu11,cpsat,SATISFIABLE,301.106,3574,0,
+dmu05,cpsat,SATISFIABLE,301.12,2769,0,
+dmu12,chuffed,SATISFIABLE,300.952,37605,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu13,chuffed,SATISFIABLE,301.067,35743,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu15,chuffed,SATISFIABLE,301.068,34996,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu14,chuffed,SATISFIABLE,301.085,36495,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu16,chuffed,SATISFIABLE,301.075,48032,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu17,chuffed,SATISFIABLE,301.068,49483,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu12,gecode,SATISFIABLE,300.115,4470,0,
+dmu13,gecode,SATISFIABLE,300.079,4949,0,
+dmu15,gecode,SATISFIABLE,300.076,4642,0,
+dmu14,gecode,SATISFIABLE,300.077,4238,0,
+dmu16,gecode,SATISFIABLE,300.11,4958,0,
+dmu17,gecode,SATISFIABLE,300.107,4996,0,
+dmu15,cpsat,OPTIMAL,157.222,3343,0,
+dmu12,cpsat,SATISFIABLE,301.125,3578,0,
+dmu17,cpsat,SATISFIABLE,300.116,3947,0,
+dmu13,cpsat,SATISFIABLE,301.105,3798,0,
+dmu14,cpsat,SATISFIABLE,301.1,3397,0,
+dmu16,cpsat,SATISFIABLE,301.095,3916,0,
+dmu18,chuffed,SATISFIABLE,301.077,51068,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu20,chuffed,SATISFIABLE,300.802,47637,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu19,chuffed,SATISFIABLE,301.076,49458,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu21,chuffed,SATISFIABLE,301.075,47673,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu22,chuffed,SATISFIABLE,301.065,48249,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu23,chuffed,SATISFIABLE,301.112,49719,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu18,gecode,SATISFIABLE,300.08,4878,0,
+dmu20,gecode,SATISFIABLE,300.078,4659,0,
+dmu19,gecode,SATISFIABLE,300.077,5009,0,
+dmu21,gecode,SATISFIABLE,300.075,5409,0,
+dmu22,gecode,SATISFIABLE,300.093,5580,0,
+dmu23,gecode,SATISFIABLE,300.103,6109,0,
+dmu23,cpsat,OPTIMAL,102.543,4668,0,
+dmu18,cpsat,SATISFIABLE,301.063,3953,0,
+dmu22,cpsat,OPTIMAL,158.372,4725,0,
+dmu20,cpsat,SATISFIABLE,301.084,3884,0,
+dmu19,cpsat,SATISFIABLE,301.079,3889,0,
+dmu21,cpsat,SATISFIABLE,301.067,4467,0,
+dmu24,chuffed,SATISFIABLE,301.055,49164,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu25,chuffed,SATISFIABLE,301.065,43017,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu26,chuffed,SATISFIABLE,301.074,61522,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu27,chuffed,SATISFIABLE,301.072,67690,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu28,chuffed,SATISFIABLE,301.073,63691,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu29,chuffed,SATISFIABLE,301.072,65587,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu24,gecode,SATISFIABLE,300.084,5972,0,
+dmu25,gecode,SATISFIABLE,300.076,5286,0,
+dmu26,gecode,SATISFIABLE,300.082,6040,0,
+dmu25,cpsat,OPTIMAL,118.148,4164,0,
+dmu27,gecode,SATISFIABLE,300.086,6327,0,
+dmu28,gecode,SATISFIABLE,300.079,6021,0,
+dmu29,gecode,SATISFIABLE,300.078,6391,0,
+dmu24,cpsat,OPTIMAL,218.795,4648,0,
+dmu26,cpsat,SATISFIABLE,301.07,4935,0,
+dmu30,chuffed,SATISFIABLE,301.066,65479,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu27,cpsat,SATISFIABLE,301.092,5132,0,
+dmu28,cpsat,SATISFIABLE,301.078,4929,0,
+dmu29,cpsat,SATISFIABLE,301.08,4922,0,
+dmu31,chuffed,SATISFIABLE,301.085,61854,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu32,chuffed,SATISFIABLE,301.066,55417,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu30,gecode,SATISFIABLE,300.081,6052,0,
+dmu33,chuffed,SATISFIABLE,301.08,60328,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu34,chuffed,SATISFIABLE,301.068,59011,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu35,chuffed,SATISFIABLE,301.072,61246,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu31,gecode,SATISFIABLE,300.085,7107,0,
+dmu32,gecode,SATISFIABLE,300.08,6622,0,
+dmu32,cpsat,OPTIMAL,111.626,5927,0,
+dmu30,cpsat,SATISFIABLE,301.075,5003,0,
+dmu33,gecode,SATISFIABLE,300.08,6729,0,
+dmu34,gecode,SATISFIABLE,300.08,6943,0,
+dmu35,gecode,SATISFIABLE,300.087,7048,0,
+dmu31,cpsat,SATISFIABLE,301.084,5822,0,
+dmu33,cpsat,OPTIMAL,209.422,5728,0,
+dmu36,chuffed,SATISFIABLE,301.076,81352,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu37,chuffed,SATISFIABLE,301.079,83690,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu34,cpsat,SATISFIABLE,301.068,5542,0,
+dmu35,cpsat,SATISFIABLE,301.069,5709,0,
+dmu38,chuffed,SATISFIABLE,301.082,78825,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu39,chuffed,SATISFIABLE,301.076,86117,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu36,gecode,SATISFIABLE,300.089,7515,0,
+dmu37,gecode,SATISFIABLE,300.101,7933,0,
+dmu41,chuffed,SATISFIABLE,300.647,12830,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu40,chuffed,SATISFIABLE,301.074,80875,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu38,gecode,SATISFIABLE,300.085,7785,0,
+dmu39,gecode,SATISFIABLE,300.092,7891,0,
+dmu36,cpsat,SATISFIABLE,301.072,6370,0,
+dmu37,cpsat,SATISFIABLE,301.066,6417,0,
+dmu41,gecode,SATISFIABLE,300.077,4261,0,
+dmu40,gecode,SATISFIABLE,300.105,7241,0,
+dmu38,cpsat,SATISFIABLE,301.08,6293,0,
+dmu39,cpsat,SATISFIABLE,301.079,6361,0,
+dmu42,chuffed,SATISFIABLE,300.759,12908,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu43,chuffed,SATISFIABLE,300.537,11280,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu41,cpsat,SATISFIABLE,301.06,3487,0,
+dmu40,cpsat,SATISFIABLE,301.078,6440,0,
+dmu44,chuffed,SATISFIABLE,301.062,14476,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu45,chuffed,SATISFIABLE,300.591,13013,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu42,gecode,SATISFIABLE,300.07,4227,0,
+dmu43,gecode,SATISFIABLE,300.069,4709,0,
+dmu46,chuffed,SATISFIABLE,300.619,17951,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu47,chuffed,SATISFIABLE,300.631,18325,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu44,gecode,SATISFIABLE,300.074,4652,0,
+dmu45,gecode,SATISFIABLE,300.072,4233,0,
+dmu42,cpsat,SATISFIABLE,301.071,3461,0,
+dmu43,cpsat,SATISFIABLE,301.071,3503,0,
+dmu46,gecode,SATISFIABLE,300.069,5717,0,
+dmu47,gecode,SATISFIABLE,300.071,5227,0,
+dmu44,cpsat,SATISFIABLE,301.065,3603,0,
+dmu45,cpsat,SATISFIABLE,301.076,3448,0,
+dmu48,chuffed,SATISFIABLE,300.983,16778,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu49,chuffed,SATISFIABLE,300.972,17222,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu46,cpsat,SATISFIABLE,301.067,4230,0,
+dmu47,cpsat,SATISFIABLE,301.072,4184,0,
+dmu50,chuffed,SATISFIABLE,300.694,16758,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu51,chuffed,SATISFIABLE,301.071,18728,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu48,gecode,SATISFIABLE,300.075,4995,0,
+dmu49,gecode,SATISFIABLE,300.074,4802,0,
+dmu52,chuffed,SATISFIABLE,300.92,19337,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu53,chuffed,SATISFIABLE,301.071,19797,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu50,gecode,SATISFIABLE,300.072,4836,0,
+dmu51,gecode,SATISFIABLE,300.072,5683,0,
+dmu48,cpsat,SATISFIABLE,301.071,4038,0,
+dmu49,cpsat,SATISFIABLE,301.068,3828,0,
+dmu52,gecode,SATISFIABLE,300.071,5921,0,
+dmu53,gecode,SATISFIABLE,300.09,5913,0,
+dmu50,cpsat,SATISFIABLE,301.075,3872,0,
+dmu51,cpsat,SATISFIABLE,301.072,4540,0,
+dmu54,chuffed,SATISFIABLE,301.004,20238,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu55,chuffed,SATISFIABLE,300.937,18149,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu52,cpsat,SATISFIABLE,301.065,4628,0,
+dmu53,cpsat,SATISFIABLE,301.069,4569,0,
+dmu56,chuffed,SATISFIABLE,301.077,26034,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu57,chuffed,SATISFIABLE,301.077,25239,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu54,gecode,SATISFIABLE,300.077,5989,0,
+dmu55,gecode,SATISFIABLE,300.073,5917,0,
+dmu58,chuffed,SATISFIABLE,301.062,25912,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu59,chuffed,SATISFIABLE,301.065,23027,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu56,gecode,SATISFIABLE,300.077,7278,0,
+dmu57,gecode,SATISFIABLE,300.075,6328,0,
+dmu54,cpsat,SATISFIABLE,301.074,4749,0,
+dmu55,cpsat,SATISFIABLE,301.071,4428,0,
+dmu58,gecode,SATISFIABLE,300.075,6439,0,
+dmu59,gecode,SATISFIABLE,300.1,6513,0,
+dmu56,cpsat,SATISFIABLE,301.068,5383,0,
+dmu57,cpsat,SATISFIABLE,301.068,5039,0,
+dmu60,chuffed,SATISFIABLE,301.075,25313,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu61,chuffed,SATISFIABLE,301.062,27335,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu58,cpsat,SATISFIABLE,301.068,5073,0,
+dmu59,cpsat,SATISFIABLE,301.089,4926,0,
+dmu62,chuffed,SATISFIABLE,301.069,25243,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu63,chuffed,SATISFIABLE,301.06,24801,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu60,gecode,SATISFIABLE,300.081,6565,0,
+dmu61,gecode,SATISFIABLE,300.078,7298,0,
+dmu64,chuffed,SATISFIABLE,301.074,24717,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu65,chuffed,SATISFIABLE,301.062,23587,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu62,gecode,SATISFIABLE,300.081,7576,0,
+dmu63,gecode,SATISFIABLE,300.077,7630,0,
+dmu60,cpsat,SATISFIABLE,301.08,5110,0,
+dmu61,cpsat,SATISFIABLE,301.074,5756,0,
+dmu64,gecode,SATISFIABLE,300.08,7471,0,
+dmu65,gecode,SATISFIABLE,300.072,7541,0,
+dmu62,cpsat,SATISFIABLE,301.075,5684,0,
+dmu63,cpsat,SATISFIABLE,301.075,5729,0,
+dmu66,chuffed,SATISFIABLE,301.074,31165,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu67,chuffed,SATISFIABLE,301.095,34306,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu64,cpsat,SATISFIABLE,301.07,6026,0,
+dmu65,cpsat,SATISFIABLE,301.072,5801,0,
+dmu68,chuffed,SATISFIABLE,301.068,33730,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu69,chuffed,SATISFIABLE,301.075,33370,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu66,gecode,SATISFIABLE,300.082,8389,0,
+dmu67,gecode,SATISFIABLE,300.083,8059,0,
+dmu70,chuffed,SATISFIABLE,301.072,33273,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu71,chuffed,SATISFIABLE,301.06,32102,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu68,gecode,SATISFIABLE,300.083,8216,0,
+dmu69,gecode,SATISFIABLE,300.083,7894,0,
+dmu66,cpsat,SATISFIABLE,301.072,6373,0,
+dmu67,cpsat,SATISFIABLE,301.07,6795,0,
+dmu70,gecode,SATISFIABLE,300.082,8090,0,
+dmu71,gecode,SATISFIABLE,300.077,8624,0,
+dmu68,cpsat,SATISFIABLE,301.079,6429,0,
+dmu69,cpsat,SATISFIABLE,301.07,7198,0,
+dmu72,chuffed,SATISFIABLE,301.064,31159,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu73,chuffed,SATISFIABLE,301.082,30697,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu70,cpsat,SATISFIABLE,301.079,6650,0,
+dmu71,cpsat,SATISFIABLE,301.069,7108,0,
+dmu74,chuffed,SATISFIABLE,301.076,30659,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu75,chuffed,SATISFIABLE,301.068,30725,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu72,gecode,SATISFIABLE,300.083,9417,0,
+dmu73,gecode,SATISFIABLE,300.081,8838,0,
+dmu76,chuffed,SATISFIABLE,301.073,40220,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu77,chuffed,SATISFIABLE,301.071,41934,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu74,gecode,SATISFIABLE,300.092,8400,0,
+dmu75,gecode,SATISFIABLE,300.079,8569,0,
+dmu72,cpsat,SATISFIABLE,301.068,7279,0,
+dmu73,cpsat,SATISFIABLE,301.07,7011,0,
+dmu76,gecode,SATISFIABLE,300.091,9974,0,
+dmu77,gecode,SATISFIABLE,300.084,9804,0,
+dmu74,cpsat,SATISFIABLE,301.08,7277,0,
+dmu75,cpsat,SATISFIABLE,301.073,7414,0,
+dmu78,chuffed,SATISFIABLE,301.071,39544,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu79,chuffed,SATISFIABLE,301.08,43850,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu76,cpsat,SATISFIABLE,301.072,9491,0,
+dmu77,cpsat,SATISFIABLE,301.086,8396,0,
+ft10,chuffed,OPTIMAL,99.824,930,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la02,chuffed,OPTIMAL,8.714,655,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu80,chuffed,SATISFIABLE,301.085,39498,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+dmu78,gecode,SATISFIABLE,300.087,9759,0,
+dmu79,gecode,SATISFIABLE,300.083,9781,0,
+ft20,chuffed,SATISFIABLE,300.164,1195,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ft10,gecode,SATISFIABLE,300.066,1074,0,
+la02,gecode,SATISFIABLE,300.063,752,0,
+la02,cpsat,OPTIMAL,0.43,655,0,
+la03,chuffed,OPTIMAL,3.096,597,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ft10,cpsat,OPTIMAL,9.849,930,0,
+dmu80,gecode,SATISFIABLE,300.086,9332,0,
+la04,chuffed,OPTIMAL,5.57,590,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la03,gecode,OPTIMAL,226.599,597,0,
+la03,cpsat,OPTIMAL,0.892,597,0,
+dmu78,cpsat,SATISFIABLE,301.07,8247,0,
+la06,chuffed,OPTIMAL,33.007,926,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+dmu79,cpsat,SATISFIABLE,301.079,8325,0,
+la07,chuffed,OPTIMAL,22.326,890,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la08,chuffed,OPTIMAL,23.162,863,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ft20,gecode,SATISFIABLE,300.066,1438,0,
+ft20,cpsat,OPTIMAL,1.86,1165,0,
+la06,gecode,OPTIMAL,40.643,926,0,
+la06,cpsat,OPTIMAL,0.322,926,0,
+dmu80,cpsat,SATISFIABLE,301.069,7850,0,
+la04,gecode,SATISFIABLE,300.065,602,0,
+la04,cpsat,OPTIMAL,0.407,590,0,
+la09,chuffed,OPTIMAL,27.925,951,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la10,chuffed,OPTIMAL,31.616,958,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la12,chuffed,OPTIMAL,88.176,1039,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la11,chuffed,OPTIMAL,103.217,1222,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la07,gecode,SATISFIABLE,300.068,937,0,
+la07,cpsat,OPTIMAL,0.537,890,0,
+la08,gecode,SATISFIABLE,300.065,907,0,
+la08,cpsat,OPTIMAL,0.658,863,0,
+la09,gecode,SATISFIABLE,300.068,1062,0,
+la09,cpsat,OPTIMAL,0.543,951,0,
+la10,gecode,SATISFIABLE,300.068,974,0,
+la10,cpsat,OPTIMAL,0.372,958,0,
+la12,gecode,SATISFIABLE,300.068,1120,0,
+la12,cpsat,OPTIMAL,0.79,1039,0,
+la16,chuffed,OPTIMAL,76.386,945,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la11,gecode,SATISFIABLE,300.067,1288,0,
+la11,cpsat,OPTIMAL,1.026,1222,0,
+la14,chuffed,OPTIMAL,132.097,1292,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la14,gecode,OPTIMAL,0.315,1292,0,
+la14,cpsat,OPTIMAL,0.358,1292,0,
+la17,chuffed,OPTIMAL,64.648,784,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la17,gecode,OPTIMAL,2.648,784,0,
+la17,cpsat,OPTIMAL,0.484,784,0,
+la15,chuffed,OPTIMAL,153.281,1207,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la18,chuffed,OPTIMAL,71.571,848,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la19,chuffed,OPTIMAL,97.141,842,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la13,chuffed,OPTIMAL,237.322,1150,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la20,chuffed,OPTIMAL,64.372,902,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la16,gecode,SATISFIABLE,300.167,1003,0,
+la16,cpsat,OPTIMAL,1.814,945,0,
+la15,gecode,SATISFIABLE,300.067,1439,0,
+la15,cpsat,OPTIMAL,0.85,1207,0,
+la18,gecode,SATISFIABLE,300.069,863,0,
+la18,cpsat,OPTIMAL,1.088,848,0,
+la19,gecode,SATISFIABLE,300.068,924,0,
+la13,gecode,SATISFIABLE,300.066,1205,0,
+la13,cpsat,OPTIMAL,1.373,1150,0,
+la19,cpsat,OPTIMAL,7.687,842,0,
+la20,gecode,SATISFIABLE,300.064,927,0,
+la20,cpsat,OPTIMAL,2.401,902,0,
+la21,chuffed,SATISFIABLE,300.362,1296,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la22,chuffed,SATISFIABLE,300.31,978,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la23,chuffed,SATISFIABLE,301.071,3372,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la24,chuffed,SATISFIABLE,301.073,2918,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la25,chuffed,SATISFIABLE,300.395,1822,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la26,chuffed,SATISFIABLE,301.07,6834,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la21,gecode,SATISFIABLE,300.074,1207,0,
+la22,gecode,SATISFIABLE,300.072,1131,0,
+la22,cpsat,OPTIMAL,8.012,927,0,
+la23,gecode,SATISFIABLE,300.071,1159,0,
+la23,cpsat,OPTIMAL,3.906,1032,0,
+la24,gecode,SATISFIABLE,300.069,1070,0,
+la25,gecode,SATISFIABLE,300.067,1071,0,
+la26,gecode,SATISFIABLE,300.067,1356,0,
+la26,cpsat,OPTIMAL,10.997,1218,0,
+la21,cpsat,SATISFIABLE,301.07,1046,0,
+la24,cpsat,OPTIMAL,194.521,935,0,
+la27,chuffed,SATISFIABLE,301.057,6194,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la28,chuffed,SATISFIABLE,301.079,6360,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la25,cpsat,SATISFIABLE,301.07,977,0,
+la29,chuffed,SATISFIABLE,301.083,5630,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la30,chuffed,SATISFIABLE,300.785,6908,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la31,chuffed,SATISFIABLE,300.799,11014,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la27,gecode,SATISFIABLE,300.07,1484,0,
+la28,gecode,SATISFIABLE,300.072,1494,0,
+la28,cpsat,OPTIMAL,14.704,1216,0,
+la32,chuffed,SATISFIABLE,300.449,12879,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la29,gecode,SATISFIABLE,300.069,1481,0,
+la27,cpsat,OPTIMAL,121.249,1235,0,
+la30,gecode,SATISFIABLE,300.07,1474,0,
+la31,gecode,SATISFIABLE,300.067,1940,0,
+la30,cpsat,OPTIMAL,7.931,1355,0,
+la31,cpsat,OPTIMAL,15.042,1784,0,
+la33,chuffed,SATISFIABLE,300.82,11737,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la32,gecode,SATISFIABLE,300.07,2137,0,
+la32,cpsat,OPTIMAL,13.565,1850,0,
+la29,cpsat,SATISFIABLE,301.068,1172,0,
+la34,chuffed,SATISFIABLE,300.58,11707,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la35,chuffed,SATISFIABLE,300.751,11038,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la36,chuffed,SATISFIABLE,300.372,8143,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la33,gecode,SATISFIABLE,300.073,1896,0,
+la33,cpsat,OPTIMAL,16.969,1719,0,
+la37,chuffed,SATISFIABLE,301.066,8748,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la38,chuffed,SATISFIABLE,301.065,6438,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la34,gecode,SATISFIABLE,300.073,2034,0,
+la34,cpsat,OPTIMAL,20.253,1721,0,
+la35,gecode,SATISFIABLE,300.076,2085,0,
+la36,gecode,SATISFIABLE,300.071,1453,0,
+la35,cpsat,OPTIMAL,14.95,1888,0,
+la36,cpsat,OPTIMAL,56.054,1268,0,
+orb02,chuffed,OPTIMAL,62.403,888,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la39,chuffed,SATISFIABLE,301.071,6878,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+la37,gecode,SATISFIABLE,300.07,1573,0,
+la38,gecode,SATISFIABLE,300.069,1383,0,
+la37,cpsat,OPTIMAL,14.451,1397,0,
+la40,chuffed,SATISFIABLE,301.068,7123,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+orb04,chuffed,OPTIMAL,69.554,1005,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb03,chuffed,SATISFIABLE,300.135,1020,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb02,gecode,SATISFIABLE,300.069,1032,0,
+orb02,cpsat,OPTIMAL,7.645,888,0,
+la39,gecode,SATISFIABLE,300.07,1298,0,
+la39,cpsat,OPTIMAL,17.158,1233,0,
+orb05,chuffed,OPTIMAL,42.709,887,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la38,cpsat,SATISFIABLE,301.065,1201,0,
+orb07,chuffed,OPTIMAL,24.083,397,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+la40,gecode,SATISFIABLE,300.069,1516,0,
+orb04,gecode,SATISFIABLE,300.062,1055,0,
+orb04,cpsat,OPTIMAL,8.1,1005,0,
+orb08,chuffed,OPTIMAL,13.917,899,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb06,chuffed,OPTIMAL,151.29,1010,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb03,gecode,SATISFIABLE,300.066,1204,0,
+la40,cpsat,OPTIMAL,202.207,1222,0,
+orb05,gecode,SATISFIABLE,300.069,932,0,
+orb05,cpsat,OPTIMAL,10.154,887,0,
+orb09,chuffed,OPTIMAL,45.575,934,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb07,gecode,SATISFIABLE,300.07,440,0,
+orb07,cpsat,OPTIMAL,7.727,397,0,
+orb10,chuffed,OPTIMAL,57.869,944,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb08,gecode,SATISFIABLE,300.069,953,0,
+orb08,cpsat,OPTIMAL,2.878,899,0,
+orb06,gecode,SATISFIABLE,300.067,1055,0,
+orb03,cpsat,OPTIMAL,212.799,1005,0,
+orb06,cpsat,OPTIMAL,11.421,1010,0,
+orb09,gecode,SATISFIABLE,300.067,970,0,
+orb09,cpsat,OPTIMAL,2.279,934,0,
+swv02,chuffed,SATISFIABLE,300.318,2398,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+orb10,gecode,SATISFIABLE,300.068,1087,0,
+orb10,cpsat,OPTIMAL,5.217,944,0,
+swv03,chuffed,SATISFIABLE,300.219,1958,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv04,chuffed,SATISFIABLE,300.237,2356,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv05,chuffed,SATISFIABLE,300.267,2096,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv06,chuffed,SATISFIABLE,300.682,5983,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv02,gecode,SATISFIABLE,300.069,1856,0,
+swv07,chuffed,SATISFIABLE,300.666,5341,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv03,gecode,SATISFIABLE,300.071,1924,0,
+swv04,gecode,SATISFIABLE,300.068,2035,0,
+swv05,gecode,SATISFIABLE,300.068,1846,0,
+swv06,gecode,SATISFIABLE,300.071,2068,0,
+swv02,cpsat,SATISFIABLE,301.075,1480,0,
+swv07,gecode,SATISFIABLE,300.071,2113,0,
+swv03,cpsat,SATISFIABLE,301.06,1437,0,
+swv04,cpsat,SATISFIABLE,301.062,1513,0,
+swv05,cpsat,SATISFIABLE,301.064,1441,0,
+swv06,cpsat,SATISFIABLE,301.064,1732,0,
+swv08,chuffed,SATISFIABLE,300.419,6127,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv07,cpsat,SATISFIABLE,301.071,1647,0,
+swv09,chuffed,SATISFIABLE,300.467,5991,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv10,chuffed,SATISFIABLE,300.358,5796,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv11,chuffed,SATISFIABLE,300.759,10315,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv12,chuffed,SATISFIABLE,300.817,10694,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv08,gecode,SATISFIABLE,300.083,2353,0,
+swv13,chuffed,SATISFIABLE,300.96,10662,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv09,gecode,SATISFIABLE,300.072,2388,0,
+swv10,gecode,SATISFIABLE,300.178,2246,0,
+swv11,gecode,SATISFIABLE,300.072,4017,0,
+swv12,gecode,SATISFIABLE,300.092,4105,0,
+swv08,cpsat,SATISFIABLE,301.064,1856,0,
+swv13,gecode,SATISFIABLE,300.073,4009,0,
+swv09,cpsat,SATISFIABLE,301.071,1756,0,
+swv10,cpsat,SATISFIABLE,301.061,1825,0,
+swv11,cpsat,SATISFIABLE,301.067,3191,0,
+swv12,cpsat,SATISFIABLE,301.066,3194,0,
+swv14,chuffed,SATISFIABLE,300.982,10303,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv13,cpsat,SATISFIABLE,301.077,3239,0,
+swv15,chuffed,SATISFIABLE,301.043,10189,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv16,chuffed,SATISFIABLE,300.958,19985,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv17,chuffed,SATISFIABLE,301.067,19822,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+swv18,chuffed,SATISFIABLE,301.067,19404,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+swv14,gecode,SATISFIABLE,300.078,3991,0,
+swv19,chuffed,SATISFIABLE,301.122,20199,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+swv15,gecode,SATISFIABLE,300.077,3958,0,
+swv16,gecode,SATISFIABLE,300.075,3059,0,
+swv16,cpsat,OPTIMAL,0.642,2924,0,
+swv17,gecode,SATISFIABLE,300.079,3227,0,
+swv17,cpsat,OPTIMAL,21.286,2794,0,
+swv18,gecode,SATISFIABLE,300.089,3156,0,
+swv14,cpsat,SATISFIABLE,301.085,3294,0,
+swv18,cpsat,OPTIMAL,21.31,2852,0,
+swv19,gecode,SATISFIABLE,300.073,3224,0,
+swv15,cpsat,SATISFIABLE,301.067,3100,0,
+swv19,cpsat,OPTIMAL,62.966,2843,0,
+swv20,chuffed,SATISFIABLE,301.067,18040,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta03js,chuffed,SATISFIABLE,301.073,6703,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta04js,chuffed,SATISFIABLE,301.075,6117,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta05js,chuffed,SATISFIABLE,301.073,8112,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta06js,chuffed,SATISFIABLE,300.572,6389,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta07js,chuffed,SATISFIABLE,300.434,6195,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+swv20,gecode,SATISFIABLE,300.079,3145,0,
+swv20,cpsat,OPTIMAL,0.638,2823,0,
+ta03js,gecode,SATISFIABLE,300.073,1471,0,
+ta03js,cpsat,OPTIMAL,134.44,1218,0,
+ta04js,gecode,SATISFIABLE,300.073,1256,0,
+ta05js,gecode,SATISFIABLE,300.069,1408,0,
+ta06js,gecode,SATISFIABLE,300.069,1478,0,
+ta07js,gecode,SATISFIABLE,300.068,1471,0,
+ta08js,chuffed,SATISFIABLE,300.476,7179,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta04js,cpsat,OPTIMAL,251.735,1175,0,
+ta09js,chuffed,SATISFIABLE,301.063,8943,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta05js,cpsat,SATISFIABLE,301.06,1228,0,
+ta06js,cpsat,SATISFIABLE,301.063,1246,0,
+ta07js,cpsat,SATISFIABLE,301.067,1227,0,
+ta08js,gecode,SATISFIABLE,300.068,1402,0,
+ta10js,chuffed,SATISFIABLE,300.508,6384,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta09js,gecode,SATISFIABLE,300.075,1430,0,
+ta11js,chuffed,SATISFIABLE,300.646,9255,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta12js,chuffed,SATISFIABLE,300.483,12262,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta13js,chuffed,SATISFIABLE,300.489,9774,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta08js,cpsat,SATISFIABLE,301.066,1217,0,
+ta10js,gecode,SATISFIABLE,300.073,1522,0,
+ta09js,cpsat,SATISFIABLE,301.07,1274,0,
+ta11js,gecode,SATISFIABLE,300.072,1692,0,
+ta12js,gecode,SATISFIABLE,300.07,1894,0,
+ta13js,gecode,SATISFIABLE,300.072,1554,0,
+ta14js,chuffed,SATISFIABLE,301.058,10938,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta10js,cpsat,SATISFIABLE,301.064,1241,0,
+ta15js,chuffed,SATISFIABLE,300.415,11230,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta11js,cpsat,SATISFIABLE,301.074,1397,0,
+ta12js,cpsat,SATISFIABLE,301.074,1407,0,
+ta13js,cpsat,SATISFIABLE,301.071,1363,0,
+ta14js,gecode,SATISFIABLE,300.074,1644,0,
+ta16js,chuffed,SATISFIABLE,300.687,12558,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta14js,cpsat,OPTIMAL,152.33,1345,0,
+ta15js,gecode,SATISFIABLE,300.071,1794,0,
+ta17js,chuffed,SATISFIABLE,300.772,11241,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta18js,chuffed,SATISFIABLE,301.061,11454,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta19js,chuffed,SATISFIABLE,301.077,10504,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta16js,gecode,SATISFIABLE,300.075,1767,0,
+ta20js,chuffed,SATISFIABLE,301.08,10449,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta15js,cpsat,SATISFIABLE,301.06,1403,0,
+ta17js,gecode,SATISFIABLE,300.074,1713,0,
+ta18js,gecode,SATISFIABLE,300.07,1894,0,
+ta19js,gecode,SATISFIABLE,300.081,1609,0,
+ta16js,cpsat,SATISFIABLE,301.064,1375,0,
+ta20js,gecode,SATISFIABLE,300.071,1726,0,
+ta21js,chuffed,SATISFIABLE,301.057,15774,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta17js,cpsat,SATISFIABLE,301.079,1462,0,
+ta18js,cpsat,SATISFIABLE,301.074,1428,0,
+ta19js,cpsat,SATISFIABLE,301.072,1372,0,
+ta22js,chuffed,SATISFIABLE,301.064,16519,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta20js,cpsat,SATISFIABLE,301.068,1366,0,
+ta21js,gecode,SATISFIABLE,300.074,1963,0,
+ta23js,chuffed,SATISFIABLE,301.072,16075,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta24js,chuffed,SATISFIABLE,301.065,15780,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta25js,chuffed,SATISFIABLE,300.912,14543,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta22js,gecode,SATISFIABLE,300.074,1903,0,
+ta26js,chuffed,SATISFIABLE,301.061,16904,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta21js,cpsat,SATISFIABLE,301.081,1672,0,
+ta23js,gecode,SATISFIABLE,300.074,1952,0,
+ta24js,gecode,SATISFIABLE,300.073,2078,0,
+ta25js,gecode,SATISFIABLE,300.069,1941,0,
+ta22js,cpsat,SATISFIABLE,301.085,1642,0,
+ta26js,gecode,SATISFIABLE,300.069,2014,0,
+ta27js,chuffed,SATISFIABLE,301.072,17371,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta23js,cpsat,SATISFIABLE,301.075,1604,0,
+ta24js,cpsat,SATISFIABLE,301.063,1677,0,
+ta25js,cpsat,SATISFIABLE,301.065,1646,0,
+ta28js,chuffed,SATISFIABLE,301.062,15524,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta26js,cpsat,SATISFIABLE,301.067,1679,0,
+ta27js,gecode,SATISFIABLE,300.078,2360,0,
+ta29js,chuffed,SATISFIABLE,301.064,17362,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta30js,chuffed,SATISFIABLE,301.063,15976,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta31js,chuffed,SATISFIABLE,300.504,17390,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta28js,gecode,SATISFIABLE,300.074,1992,0,
+ta32js,chuffed,SATISFIABLE,301.062,18808,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta27js,cpsat,SATISFIABLE,301.084,1716,0,
+ta29js,gecode,SATISFIABLE,300.072,1970,0,
+ta30js,gecode,SATISFIABLE,300.076,1937,0,
+ta31js,gecode,SATISFIABLE,300.072,2407,0,
+ta28js,cpsat,SATISFIABLE,301.069,1633,0,
+ta32js,gecode,SATISFIABLE,300.073,2410,0,
+ta33js,chuffed,SATISFIABLE,301.073,18427,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta29js,cpsat,SATISFIABLE,301.111,1660,0,
+ta30js,cpsat,SATISFIABLE,301.082,1608,0,
+ta31js,cpsat,SATISFIABLE,301.072,1799,0,
+ta34js,chuffed,SATISFIABLE,301.013,17782,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta32js,cpsat,SATISFIABLE,301.068,1873,0,
+ta33js,gecode,SATISFIABLE,300.209,2402,0,
+ta35js,chuffed,SATISFIABLE,301.068,17822,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta36js,chuffed,SATISFIABLE,300.608,17931,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta37js,chuffed,SATISFIABLE,300.897,18205,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta34js,gecode,SATISFIABLE,300.075,2550,0,
+ta38js,chuffed,SATISFIABLE,301.063,16983,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta33js,cpsat,SATISFIABLE,301.076,1851,0,
+ta35js,gecode,SATISFIABLE,300.076,2287,0,
+ta36js,gecode,SATISFIABLE,300.08,2380,0,
+ta37js,gecode,SATISFIABLE,300.077,2440,0,
+ta35js,cpsat,OPTIMAL,114.397,2007,0,
+ta34js,cpsat,SATISFIABLE,301.069,1856,0,
+ta38js,gecode,SATISFIABLE,300.075,2169,0,
+ta39js,chuffed,SATISFIABLE,301.067,15729,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta36js,cpsat,SATISFIABLE,301.075,1890,0,
+ta37js,cpsat,SATISFIABLE,301.073,1797,0,
+ta40js,chuffed,SATISFIABLE,300.937,17234,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta41js,chuffed,SATISFIABLE,300.834,25432,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta38js,cpsat,SATISFIABLE,301.081,1734,0,
+ta39js,gecode,SATISFIABLE,300.083,2276,0,
+ta42js,chuffed,SATISFIABLE,301.077,25395,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta43js,chuffed,SATISFIABLE,301.076,23258,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta40js,gecode,SATISFIABLE,300.073,2180,0,
+ta41js,gecode,SATISFIABLE,300.08,2628,0,
+ta44js,chuffed,SATISFIABLE,301.07,22356,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta39js,cpsat,SATISFIABLE,301.08,1816,0,
+ta42js,gecode,SATISFIABLE,300.081,2465,0,
+ta43js,gecode,SATISFIABLE,300.123,2328,0,
+ta40js,cpsat,SATISFIABLE,301.075,1741,0,
+ta41js,cpsat,SATISFIABLE,301.069,2124,0,
+ta44js,gecode,SATISFIABLE,300.18,2663,0,
+ta45js,chuffed,SATISFIABLE,301.08,24778,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta42js,cpsat,SATISFIABLE,301.076,2025,0,
+ta43js,cpsat,SATISFIABLE,301.079,1953,0,
+ta46js,chuffed,SATISFIABLE,301.079,25108,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta47js,chuffed,SATISFIABLE,300.886,23313,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta44js,cpsat,SATISFIABLE,301.067,2047,0,
+ta45js,gecode,SATISFIABLE,300.079,2608,0,
+ta48js,chuffed,SATISFIABLE,301.077,23651,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta49js,chuffed,SATISFIABLE,301.076,23925,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta46js,gecode,SATISFIABLE,300.079,2663,0,
+ta47js,gecode,SATISFIABLE,300.076,2436,0,
+ta50js,chuffed,SATISFIABLE,301.069,24919,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta45js,cpsat,SATISFIABLE,301.078,2045,0,
+ta48js,gecode,SATISFIABLE,300.077,2573,0,
+ta49js,gecode,SATISFIABLE,300.081,2812,0,
+ta46js,cpsat,SATISFIABLE,301.068,2114,0,
+ta47js,cpsat,SATISFIABLE,301.064,1998,0,
+ta50js,gecode,SATISFIABLE,300.083,2662,0,
+ta51js,chuffed,SATISFIABLE,301.065,30344,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta48js,cpsat,SATISFIABLE,301.068,2053,0,
+ta49js,cpsat,SATISFIABLE,301.068,2032,0,
+ta52js,chuffed,SATISFIABLE,301.078,30182,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta53js,chuffed,SATISFIABLE,301.067,27890,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta50js,cpsat,SATISFIABLE,301.07,2065,0,
+ta51js,gecode,SATISFIABLE,300.085,3698,0,
+ta54js,chuffed,SATISFIABLE,301.074,27689,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta55js,chuffed,SATISFIABLE,301.066,28717,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta52js,gecode,SATISFIABLE,300.089,3583,0,
+ta53js,gecode,SATISFIABLE,300.081,3234,0,
+ta56js,chuffed,SATISFIABLE,301.079,30506,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta51js,cpsat,SATISFIABLE,301.08,2835,0,
+ta54js,gecode,SATISFIABLE,300.082,3441,0,
+ta55js,gecode,SATISFIABLE,300.079,3507,0,
+ta52js,cpsat,SATISFIABLE,301.078,2873,0,
+ta53js,cpsat,SATISFIABLE,301.077,2742,0,
+ta56js,gecode,SATISFIABLE,300.081,3609,0,
+ta57js,chuffed,SATISFIABLE,301.073,30796,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta54js,cpsat,SATISFIABLE,301.077,2905,0,
+ta55js,cpsat,SATISFIABLE,301.085,2866,0,
+ta58js,chuffed,SATISFIABLE,301.082,31185,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta59js,chuffed,SATISFIABLE,301.077,29499,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta56js,cpsat,SATISFIABLE,301.074,2824,0,
+ta57js,gecode,SATISFIABLE,300.099,3576,0,
+ta60js,chuffed,SATISFIABLE,301.071,30181,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta61js,chuffed,SATISFIABLE,301.078,40429,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta58js,gecode,SATISFIABLE,300.107,3632,0,
+ta59js,gecode,SATISFIABLE,300.085,3531,0,
+ta62js,chuffed,SATISFIABLE,301.074,43142,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta57js,cpsat,SATISFIABLE,301.075,3000,0,
+ta60js,gecode,SATISFIABLE,300.103,3537,0,
+ta61js,gecode,SATISFIABLE,300.089,3626,0,
+ta58js,cpsat,SATISFIABLE,301.072,2969,0,
+ta59js,cpsat,SATISFIABLE,301.078,2781,0,
+ta62js,gecode,SATISFIABLE,300.083,3791,0,
+ta63js,chuffed,SATISFIABLE,301.076,41107,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta60js,cpsat,SATISFIABLE,301.075,2818,0,
+ta61js,cpsat,SATISFIABLE,301.074,3162,0,
+ta64js,chuffed,SATISFIABLE,301.072,40189,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta65js,chuffed,SATISFIABLE,301.077,40027,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta62js,cpsat,SATISFIABLE,301.075,3349,0,
+ta63js,gecode,SATISFIABLE,300.089,3715,0,
+ta66js,chuffed,SATISFIABLE,301.073,40615,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta67js,chuffed,SATISFIABLE,301.08,40244,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta64js,gecode,SATISFIABLE,300.093,3534,0,
+ta65js,gecode,SATISFIABLE,300.089,3780,0,
+ta68js,chuffed,SATISFIABLE,301.084,39708,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta63js,cpsat,SATISFIABLE,301.084,2963,0,
+ta66js,gecode,SATISFIABLE,300.103,3745,0,
+ta67js,gecode,SATISFIABLE,300.11,3481,0,
+ta64js,cpsat,SATISFIABLE,301.076,2993,0,
+ta65js,cpsat,SATISFIABLE,301.078,3130,0,
+ta68js,gecode,SATISFIABLE,300.092,3635,0,
+ta69js,chuffed,SATISFIABLE,301.071,41144,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta66js,cpsat,SATISFIABLE,301.074,3085,0,
+ta67js,cpsat,SATISFIABLE,301.086,3138,0,
+ta70js,chuffed,SATISFIABLE,301.085,41393,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta71js,chuffed,SATISFIABLE,301.088,81236,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta68js,cpsat,SATISFIABLE,301.072,3050,0,
+ta69js,gecode,SATISFIABLE,300.091,3846,0,
+ta72js,chuffed,SATISFIABLE,301.093,79178,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta73js,chuffed,SATISFIABLE,301.083,80489,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta70js,gecode,SATISFIABLE,300.111,3890,0,
+ta71js,gecode,SATISFIABLE,300.117,6528,0,
+ta74js,chuffed,SATISFIABLE,301.079,81525,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta69js,cpsat,SATISFIABLE,301.08,3275,0,
+ta72js,gecode,SATISFIABLE,300.119,6442,0,
+ta73js,gecode,SATISFIABLE,300.133,6666,0,
+ta70js,cpsat,SATISFIABLE,301.066,3278,0,
+ta71js,cpsat,SATISFIABLE,301.1,5948,0,
+ta74js,gecode,SATISFIABLE,300.111,6371,0,
+ta75js,chuffed,SATISFIABLE,301.092,78311,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta72js,cpsat,SATISFIABLE,301.086,5550,0,
+ta73js,cpsat,SATISFIABLE,301.083,5944,0,
+ta76js,chuffed,SATISFIABLE,301.096,81159,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta77js,chuffed,SATISFIABLE,301.093,84004,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta74js,cpsat,SATISFIABLE,301.103,5655,0,
+ta75js,gecode,SATISFIABLE,300.12,6436,0,
+ta78js,chuffed,SATISFIABLE,301.084,79696,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta79js,chuffed,SATISFIABLE,301.095,78896,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta76js,gecode,SATISFIABLE,300.141,6360,0,
+ta77js,gecode,SATISFIABLE,300.119,6478,0,
+ta80js,chuffed,SATISFIABLE,301.084,77013,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta75js,cpsat,SATISFIABLE,301.09,6029,0,
+ta78js,gecode,SATISFIABLE,300.128,6392,0,
+ta79js,gecode,SATISFIABLE,300.12,6441,0,
+ta76js,cpsat,SATISFIABLE,301.088,5814,0,
+ta77js,cpsat,SATISFIABLE,301.091,5813,0,
+ta80js,gecode,SATISFIABLE,300.113,6267,0,
+yn2,chuffed,SATISFIABLE,300.898,8409,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+ta78js,cpsat,SATISFIABLE,301.091,5752,0,
+ta79js,cpsat,SATISFIABLE,301.094,5627,0,
+yn3,chuffed,SATISFIABLE,301.076,8861,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+yn4,chuffed,SATISFIABLE,301.072,8595,0,WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds | *** INTERRUPTED ***
+ta80js,cpsat,SATISFIABLE,301.091,5463,0,
+yn2,gecode,SATISFIABLE,300.075,1085,0,
+yn3,gecode,SATISFIABLE,300.07,1083,0,
+yn4,gecode,SATISFIABLE,300.069,1314,0,
+yn2,cpsat,SATISFIABLE,301.074,948,0,
+yn3,cpsat,SATISFIABLE,301.082,916,0,
+yn4,cpsat,SATISFIABLE,301.062,995,0,
