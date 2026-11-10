@@ -1,0 +1,193 @@
+%==============================================================================
+%  TRABAJO DE GRADO - Schedule de ejecución basado en portafolios para el
+%  problema del Job Shop clásico
+%  Universidad del Valle - Escuela de Ingeniería de Sistemas y Computación
+%
+%  Estructura:
+%    main.tex                -> preámbulo, portada y orden del documento
+%    preliminares/          -> agradecimientos y resumen
+%    capitulos/             -> un archivo por capítulo
+%    anexos/                -> un archivo por anexo
+%    referencias.tex        -> lista de referencias (formato APA)
+%
+%  Compilar con pdfLaTeX (Overleaf: Menu -> Compiler -> pdfLaTeX).
+%==============================================================================
+\documentclass[12pt, letterpaper, oneside]{report}
+
+%------------------------------------------------------------------------------
+%  Idioma y codificación
+%------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla, es-nodecimaldot]{babel}
+
+%------------------------------------------------------------------------------
+%  Tipografía, márgenes e interlineado
+%------------------------------------------------------------------------------
+\usepackage{mathptmx}                 % Times
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{1.27cm}
+\usepackage[expansion=false]{microtype}
+
+%------------------------------------------------------------------------------
+%  Paquetes generales
+%------------------------------------------------------------------------------
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\graphicspath{{figuras/}}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage{caption}
+\usepackage{float}               % [H]: cada tabla y figura queda donde se escribe, sin cortar párrafos
+\captionsetup{font=small, labelfont=bf, labelsep=period}
+% Las páginas que solo contienen tablas o figuras se alinean arriba.
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+%------------------------------------------------------------------------------
+%  Citas en formato autor-año (APA)
+%------------------------------------------------------------------------------
+\usepackage[round, authoryear]{natbib}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{0.5em}
+
+%------------------------------------------------------------------------------
+%  Encabezados de capítulo y sección
+%------------------------------------------------------------------------------
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{0.4em}{}
+\titleformat{name=\chapter, numberless}
+  {\normalfont\bfseries\centering}{}{0pt}{}
+\titlespacing*{\chapter}{0pt}{0pt}{1.5em}
+\titleformat{\section}
+  {\normalfont\bfseries\centering}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+\titleformat{\subsection}
+  {\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{1em}{0.4em}
+\titleformat{\subsubsection}
+  {\normalfont\bfseries\itshape}{\thesubsubsection}{0.6em}{}
+
+%------------------------------------------------------------------------------
+%  Numeración de página en la esquina superior derecha
+%------------------------------------------------------------------------------
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[R]{\textsc{\thepage}}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+\pagestyle{plain}
+\setlength{\headheight}{14.5pt}
+
+%------------------------------------------------------------------------------
+%  Nombres de los elementos del documento
+%------------------------------------------------------------------------------
+\addto\captionsspanish{%
+  \renewcommand{\contentsname}{Índice general}%
+  \renewcommand{\listfigurename}{Índice de figuras}%
+  \renewcommand{\listtablename}{Índice de tablas}%
+  \renewcommand{\bibname}{Referencias}%
+  \renewcommand{\appendixname}{Anexo}%
+}
+
+%------------------------------------------------------------------------------
+%  Enlaces (al final del preámbulo)
+%------------------------------------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+%------------------------------------------------------------------------------
+%  Datos del trabajo
+%------------------------------------------------------------------------------
+\newcommand{\titulo}{SCHEDULE DE EJECUCIÓN BASADO EN PORTAFOLIOS PARA EL\\
+  PROBLEMA DEL JOB SHOP CLÁSICO}
+\newcommand{\fecha}{Noviembre de 2026}
+
+%==============================================================================
+\begin{document}
+%==============================================================================
+
+%------------------------------------------------------------------------------
+%  Portada
+%------------------------------------------------------------------------------
+\pagenumbering{Alph}
+\begin{titlepage}
+  \centering
+  \singlespacing
+  \includegraphics[width=4cm]{logo_univalle.png}\par
+  \vspace{1cm}
+  {\large\bfseries \titulo\par}
+  \vspace{0.8cm}
+  Modalidad Trabajo Profesional\par
+  \vfill
+  Oscar David Imbachi Ordoñez\\
+  201931037\\
+  \texttt{oscar.imbachi@correounivalle.edu.co}\par
+  \vfill
+  Director\\
+  Robinson Andrey Duque Agudelo, Ph.D.\\
+  Universidad del Valle\\
+  \texttt{robinson.duque@correounivalle.edu.co}\par
+  \vspace{0.8cm}
+  Codirector\\
+  Alejandro Arbeláez Rodríguez, Ph.D.\\
+  Universitat Politècnica de València\\
+  \texttt{aarbrod@upv.es}\par
+  \vfill
+  Universidad del Valle\\
+  Facultad de Ingeniería\\
+  Escuela de Ingeniería de Sistemas y Computación\\
+  Programa Académico de Ingeniería de Sistemas (3743)\\
+  Santiago de Cali\\
+  \fecha\par
+\end{titlepage}
+
+%------------------------------------------------------------------------------
+%  Páginas preliminares (numeración romana)
+%------------------------------------------------------------------------------
+\pagenumbering{roman}
+\input{preliminares/agradecimientos}
+\input{preliminares/resumen}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+%------------------------------------------------------------------------------
+%  Cuerpo del documento (numeración arábiga)
+%------------------------------------------------------------------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\input{capitulos/01_introduccion}
+\input{capitulos/02_marco_referencia}
+\input{capitulos/03_problema_metodologia}
+\input{capitulos/04_caracterizacion_datos}
+\input{capitulos/05_portafolio}
+\input{capitulos/06_diseno_experimental}
+\input{capitulos/07_resultados}
+\input{capitulos/08_conclusiones}
+
+%------------------------------------------------------------------------------
+%  Referencias
+%------------------------------------------------------------------------------
+\input{referencias}
+
+%------------------------------------------------------------------------------
+%  Anexos
+%------------------------------------------------------------------------------
+\appendix
+\input{anexos/A_resultados_instancia}
+\input{anexos/B_caracteristicas}
+\input{anexos/C_configuracion}
+\input{anexos/D_reproduccion}
+
+\end{document}
