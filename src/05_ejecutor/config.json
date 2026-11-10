@@ -1,0 +1,20 @@
+{
+  "bloques": [
+    "0_humo",
+    "D_campana"
+  ],
+  "workers_paralelo": 2,
+  "margen_python_s": 20,
+  "versiones_esperadas": {
+    "org.chuffed.chuffed": "0.13.2",
+    "org.gecode.gecode": "6.3.0",
+    "cp-sat": "9.12.4544"
+  },
+  "minizinc_esperado": "2.9.1",
+  "solver_ids": {
+    "chuffed": "org.chuffed.chuffed",
+    "gecode": "org.gecode.gecode",
+    "cpsat": "cp-sat"
+  },
+  "carga_cpu_maxima_pct": 101
+}
