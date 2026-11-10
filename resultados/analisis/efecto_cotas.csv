@@ -1,0 +1,4 @@
+solver,gap_original,gap_cotas,opt_original,opt_cotas,opt_nuevos,opt_perdidos,t_mediano_original,t_mediano_cotas,mejora_sobre_original,peor_que_original
+chuffed,648.325,16.758,28,36,8,0,60.136,2.794,207,1
+gecode,25.566,21.681,5,6,1,0,2.648,0.358,172,51
+cpsat,4.33,3.967,63,62,1,2,9.849,9.854,82,22

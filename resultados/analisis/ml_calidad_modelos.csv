@@ -1,0 +1,13 @@
+modelo,metrica,valor
+Resolución (Chuffed),AUC,0.9821
+Resolución (Chuffed),exactitud,0.9534
+Resolución (Gecode),AUC,0.9812
+Resolución (Gecode),exactitud,0.9703
+Resolución (Chuffed V2),AUC,0.9732
+Resolución (Chuffed V2),exactitud,0.9407
+"Tiempo condicional (Chuffed, resueltas)",MAE (s),41.7401
+"Tiempo condicional (Chuffed, resueltas)",mediana error relativo,0.8985
+Mejor configuración,exactitud,0.7669
+Mejor configuración (Chuffed vs resto),AUC,0.8532
+Mejor configuración (Gecode vs resto),AUC,0.696
+Mejor configuración (Chuffed V2 vs resto),AUC,0.8574
