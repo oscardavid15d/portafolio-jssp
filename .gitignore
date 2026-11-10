@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.zip
+*.sha256.txt
+resultados/prueba_seca/
+documento/*.aux
+documento/*.log
+documento/*.out
+documento/*.toc
+documento/*.synctex.gz
