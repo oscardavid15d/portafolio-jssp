@@ -8,3 +8,5 @@ documento/*.log
 documento/*.out
 documento/*.toc
 documento/*.synctex.gz
+documento/
+resultados/analisis/latex/

@@ -51,8 +51,7 @@ resultados/
                               D_chuffed_v2.csv  Chuffed V2 (236 instancias)
                               D_cpsat.csv       CP-SAT, referencia (236 instancias)
   caracteristicas/          características de mzn2feat y propias
-  analisis/                 salidas de 06-09 (CSV, figuras y tablas/figuras LaTeX)
-documento/                  fuente LaTeX del documento
+  analisis/                 salidas de 06-08 (CSV y figuras PNG)
 ```
 
 ## Requisitos
@@ -98,8 +97,8 @@ Todos los comandos se ejecutan desde la raíz del repositorio.
    python src/08_modelo_ml.py      # el más lento: entrena 3 modelos por cada una de las 236 particiones
    python src/09_tablas_figuras.py
    ```
-   Las salidas quedan en `resultados/analisis/`; las tablas y figuras de `latex/` son las que
-   usa el documento (`documento/tablas/` y `documento/figuras/`).
+   Las salidas quedan en `resultados/analisis/`; `09_tablas_figuras.py` genera además las tablas
+   y figuras del documento en `resultados/analisis/latex/`.
 
 ## Resultados
 
@@ -140,7 +139,3 @@ como en toda medición de tiempos, los valores pueden variar ligeramente entre e
 - Características genéricas: mzn2feat (Amadini, Gabbrielli y Mauro, 2014), distribuido con
   sunny-cp.
 
-## Documento
-
-`documento/` contiene la fuente LaTeX (`main.tex`). Las tablas de `documento/tablas/` y las
-figuras de resultados de `documento/figuras/` se generan con `src/09_tablas_figuras.py`.
