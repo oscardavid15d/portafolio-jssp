@@ -1,0 +1,24 @@
+\begin{table}[H]
+  \centering
+  \small
+  \singlespacing
+  \caption{Calidad de las cotas por familia.}
+  \label{tab:cotas}
+  \begin{tabular}{lrrrrrl}
+    \toprule
+    Familia & Inst. & lb/BKS (\%) & Gap de ub (\%) & $H$/BKS & lb $=$ ub & Regla más frecuente \\
+    \midrule
+    ft & 3 & 84.0 & 23.1 & 4.5 & 0 & MWKR \\
+    la & 40 & 93.5 & 14.7 & 6.6 & 4 & MWKR \\
+    abz & 5 & 80.4 & 23.1 & 9.2 & 0 & FIFO \\
+    orb & 10 & 70.3 & 26.5 & 5.6 & 0 & FIFO \\
+    swv & 20 & 88.1 & 32.4 & 8.3 & 2 & FIFO \\
+    yn & 4 & 77.0 & 25.4 & 13.0 & 0 & FIFO \\
+    ta & 80 & 90.8 & 22.8 & 13.9 & 0 & FIFO \\
+    dmu & 80 & 86.7 & 34.4 & 13.1 & 0 & MWKR \\
+    \midrule
+    Total & 242 & 88.3 & 26.3 & 11.4 & 6 & MWKR \\
+    \bottomrule
+  \end{tabular}
+  \par\vspace{2pt}{\footnotesize lb: cota inferior; ub: mejor programa de Giffler-Thompson; $H$: horizonte del modelo original (suma de duraciones).}
+\end{table}

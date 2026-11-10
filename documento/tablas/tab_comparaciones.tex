@@ -1,0 +1,18 @@
+\begin{table}[H]
+  \centering
+  \small
+  \singlespacing
+  \caption{Comparación pareada de WTA $k$-NN (ambas) con otros métodos en las 236 instancias.}
+  \label{tab:comparaciones}
+  \begin{tabular}{lrcr}
+    \toprule
+    Frente a & Diferencia & IC 95\,\% & WTA mejor / peor \\
+    \midrule
+    SUNNY (ambas) & $-0.08$ & $[-0.19, +0.04]$ & 70 / 19 \\
+    \textit{Schedule} con ML (híbrido) & $-0.16$ & $[-0.28, -0.02]$ & 95 / 22 \\
+    \textit{Schedule} estático & $-0.19$ & $[-0.33, -0.04]$ & 126 / 28 \\
+    Regla por tamaño & $-0.25$ & $[-0.49, -0.03]$ & 26 / 15 \\
+    \bottomrule
+  \end{tabular}
+  \par\vspace{2pt}{\footnotesize Diferencia: \textit{gap} medio de WTA menos el del otro método, en puntos porcentuales; un valor negativo favorece a WTA. IC 95\,\%: intervalo de confianza de esa diferencia, obtenido por \textit{bootstrap} con 10\,000 remuestreos de las instancias; si no incluye el cero, la diferencia es significativa. WTA mejor / peor: instancias en que WTA obtiene un \textit{makespan} menor / mayor que el otro método.}
+\end{table}

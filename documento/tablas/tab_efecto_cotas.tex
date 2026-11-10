@@ -1,0 +1,19 @@
+\begin{table}[H]
+  \centering
+  \small
+  \singlespacing
+  \caption{Efecto de las cotas en el modelo (236 instancias, 300\,s).}
+  \label{tab:efecto_cotas}
+  \begin{tabular}{lrrrrrrrrr}
+    \toprule
+    \textit{Solver} & \multicolumn{2}{c}{Gap medio (\%)} & \multicolumn{3}{c}{Óptimos} & \multicolumn{2}{c}{$t$ mediano (s)} & Mejora & Empeora \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-6}\cmidrule(lr){7-8}
+     & Original & Cotas & Original & Cotas & Nuevos & Original & Cotas &  &  \\
+    \midrule
+    Chuffed & 648.3 & 16.8 & 28 & 36 & 8 & 60.1 & 2.8 & 207 & 1 \\
+    Gecode & 25.6 & 21.7 & 5 & 6 & 1 & 2.6 & 0.4 & 172 & 51 \\
+    CP-SAT (ref.) & 4.3 & 4.0 & 63 & 62 & 1 & 9.8 & 9.9 & 82 & 22 \\
+    \bottomrule
+  \end{tabular}
+  \par\vspace{2pt}{\footnotesize $t$ mediano: tiempo hasta probar el óptimo en las instancias donde ambos modelos lo prueban. Mejora/Empeora: instancias con menor/mayor \textit{makespan} que con el modelo original.}
+\end{table}

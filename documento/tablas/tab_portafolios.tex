@@ -1,0 +1,34 @@
+\begin{table}[H]
+  \centering
+  \small
+  \singlespacing
+  \caption{Comparación de los \textit{solvers} sin cotas y con cotas y de los enfoques de portafolio (236 instancias, 300\,s por instancia, validación \textit{leave-one-out}).}
+  \label{tab:portafolios}
+  \begin{tabular}{lrrrrrr}
+    \toprule
+    Método & Gap (\%) & Óptimos & PAR10 (s) & Brecha cerrada (\%) & Mejor & Peor \\
+    \midrule
+    Chuffed (sin cotas) & 648.32 & 28 & 2652 & -- & 13 & 205 \\
+    Gecode (sin cotas) & 25.57 & 5 & 2938 & -- & 7 & 225 \\
+    VBS (sin cotas) & 24.53 & 28 & 2651 & -- & 17 & 201 \\
+    \midrule
+    Chuffed & 16.76 & 36 & 2550 & -- & 103 & 101 \\
+    Gecode & 21.68 & 6 & 2924 & -- & 14 & 197 \\
+    Chuffed V2 & 15.08 & 18 & 2774 & -- & 0 & 0 \\
+    \midrule
+    Regla por tamaño & 13.37 & 36 & 2550 & 76 & 68 & 8 \\
+    WTA $k$-NN (mzn2feat) & 13.23 & 36 & 2550 & 82 & 84 & 18 \\
+    WTA $k$-NN (propias) & 13.34 & 36 & 2550 & 77 & 83 & 17 \\
+    WTA $k$-NN (ambas) & 13.12 & 36 & 2550 & 87 & 88 & 17 \\
+    SUNNY (mzn2feat) & 13.20 & 36 & 2550 & 84 & 92 & 43 \\
+    SUNNY (propias) & 13.28 & 34 & 2576 & 80 & 91 & 43 \\
+    SUNNY (ambas) & 13.20 & 36 & 2552 & 84 & 92 & 40 \\
+    \midrule
+    \textit{Schedule} estático & 13.31 & 35 & 2567 & 79 & 97 & 70 \\
+    \textit{Schedule} con ML (híbrido) & 13.28 & 35 & 2564 & 80 & 87 & 42 \\
+    \midrule
+    VBS & 12.83 & 36 & 2550 & 100 & 104 & 0 \\
+    \bottomrule
+  \end{tabular}
+  \par\vspace{2pt}{\footnotesize Cada fila es un método. Gap: \textit{gap} medio frente a la mejor solución conocida. Óptimos: instancias en que se prueba la optimalidad. PAR10: tiempo medio hasta probar el óptimo, contando 3000\,s si no se prueba. En Gap y PAR10, un valor menor es mejor. Brecha cerrada: parte de la distancia entre el SBS (Chuffed V2) y el VBS que recupera el método, $100\cdot(\mathrm{gap}_{SBS}-\mathrm{gap})/(\mathrm{gap}_{SBS}-\mathrm{gap}_{VBS})$ (0 = SBS, 100 = VBS). Mejor/Peor: instancias con menor/mayor \textit{makespan} que el SBS. Sin cotas: Chuffed y Gecode con el modelo original y su VBS, es decir, el portafolio planteado al inicio del trabajo; Chuffed V2 no tiene fila sin cotas porque se definió como configuración del modelo con cotas. Las demás filas usan el modelo con cotas.}
+\end{table}
